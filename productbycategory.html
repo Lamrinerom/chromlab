@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product by Category | www.chromelab.com</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="chromelab-section">
+      <header class="main-header">
+          <div class="top-header">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 d-flex align-items-center taglogo">
+                        <div class="mobilemenu-section nodesktop">
+                          <div class="toggle-button">
+                            <button class="btn mmbutton"></button>
+                          </div>
+                        </div>
+                          <div class="logo">
+                              <a href="index.html"><img src="assets/images/chromlab.png" alt="chromelab Logo"></a>
+                          </div> 
+                      </div>
+                      <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 order-3 order-sm-3 order-md-3 order-lg-2 order-xl-2">
+                          <div class="search-bar">
+                              <div class="searchInput">
+                                  <input type="text" placeholder="Search product here..">
+                                  <div class="resultBox">
+                                  <!-- here list are inserted from javascript -->
+                                  </div>
+                                  <div class="icon"><i class="fas fa-search"></i></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3 cartsection">
+                          <div class="user-services">
+                              <div class="account-section mt-2">
+                                  <div class="icon1"><i class="hgi hgi-stroke hgi-user-list"></i></div>
+                                  <div class="accontent">
+                                      <!-- <span class="sn">Sign In</span> -->
+                                      <p class="acc dropdown-toggle"><span>Login</span></p>
+                                          <ul class="dropdown-menu d-block">
+                                              <li>
+                                                  <div class="infouser">
+                                                    <div class="mb-3">
+                                                      <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
+                                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                    </div>
+                                                  </div> 
+                                              </li>
+                                              <li><a href="login.html" class="dromain">Login</a></li> 
+                                          </ul>
+                                  </div>
+                              </div>
+                              <!-- <a href="wishlist.html" class="account-section">
+                                  <div class="icon2"></div>
+                                  <div class="count-heart">0</div>
+                              </a> -->
+                              <a href="cart.html" class="account-section">
+                                  <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
+                                  <div class="count-cart">0</div>
+                              </a>       
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="bottom-header">
+              <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <nav class="main-nav">
+                    <ul class="main-menu">
+                      <li class="main-menu-list">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="about.html">Chromlab Categories</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="allproduct.html">Products</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="allcatalog.html">Catalogs</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="#">About Us</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="#">Contact Us</a>
+                      </li>
+                      <li class="main-menu-list">
+                        <a class="nav-link" href="#">My Account</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="mail-section">
+                    <span class="iconmail"></span>
+                    <a href="mailto:info@chromlab.com">info@chromlab.com</a>
+                  </div>
+                </div>
+                  
+              </div>
+          </div>
+      </header>
+        <section class="breadcrumb-section">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item bi-home"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Product by Category</li>
+                </ol>
+            </nav>
+        </section>
+        <section class="pbc">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="category-side-list">
+                            <h5 class="category-title">Chromlab Categories</h5>
+                                <button class="cat-item has-children">
+                                    Automatic Fraction Collector
+                                    <span class="arrow">1</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Automatic Fraction Collector CLFC-401</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Element Analyzer
+                                    <span class="arrow">1</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Element Analyzer CLEA-101</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Gas Chromatograph-Mass Spectrometer
+                                    <span class="arrow">2</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-601</a></li>
+                                    <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-602</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Gas Chromatography
+                                    <span class="arrow">2</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Gas Chromatography CLGC-601</a></li>
+                                    <li><a href="productdescription.html">Gas Chromatography CLGC-602</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Ion Chromatograph
+                                    <span class="arrow">5</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-601</a></li>
+                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-602</a></li>
+                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-603</a></li>
+                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-604</a></li>
+                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-605</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Liquid Chromatograph Mass Spectrometer
+                                    <span class="arrow">2</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-601</a></li>
+                                    <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-602</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Liquid Chromatography
+                                    <span class="arrow">3</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-601</a></li>
+                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-602</a></li>
+                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-603</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Portable GC-MS
+                                    <span class="arrow">1</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Portable GC-MS CLPCS-601</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Portable Ion Chromatograph
+                                    <span class="arrow">1</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Portable Ion Chromatograph CLPIC-601</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    TLC Scanner 
+                                    <span class="arrow">1</span>
+                                </button>
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">TLC Scanner CLTS-601</a></li>
+                                </ul>
+                                <button class="cat-item has-children">
+                                    Triple Quadrupole GC-MS
+                                    <span class="arrow">1</span>
+                                </button> 
+                                <ul class="sub-cat-list">
+                                    <li><a href="productdescription.html">Triple Quadrupole GCMS CLTQC-601</a></li>
+                                </ul>
+                            <!-- <a href="#" class="cat-item">
+                            Skincare Devices
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="titleofpage pt-0">
+                            <h1>Ion Chromatograph</h1>
+                            <p>Ion chromatographs separate and detect ions like anions (chloride, nitrate, sulfate) and cations (sodium, potassium) in samples using ion exchange principles. These systems are essential for high-sensitivity analysis in laboratories.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="pbc-cards">
+                                    <div class="pbc-img-section">
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
+                                    </div>
+                                    <div class="pbc-product-name">
+                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-601</h3></a>
+                                    </div>
+                                    <div class="specs-list">
+                                        <ul>
+                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
+                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                                            <li><span>Display :</span> <span>LED</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons-section">
+                                        <a href="productdescription.html">Explore</a>
+                                        <button class="btn cart" data-tip="Add to cart">
+                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                                        </button>
+                                        <button class="btn view" data-tip="View product">
+                                            <i class="hgi hgi-stroke hgi-view"></i>
+                            
+                                        </button>
+                                        <button class="btn catalog" data-tip="Download catalog">
+                                            <i class="hgi hgi-stroke hgi-download-02"></i>
+                                        </button>
+                                        <div class="card-tooltip" id="cardTip1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pbc-cards">
+                                    <div class="pbc-img-section">
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
+                                    </div>
+                                    <div class="pbc-product-name">
+                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-602</h3></a>
+                                    </div>
+                                    <div class="specs-list">
+                                        <ul>
+                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
+                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                                            <li><span>Display :</span> <span>LED</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons-section">
+                                        <a href="productdescription.html">Explore</a>
+                                        <button class="btn cart" data-tip="Add to cart">
+                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                                        </button>
+                                        <button class="btn view" data-tip="View product">
+                                            <i class="hgi hgi-stroke hgi-view"></i>
+                            
+                                        </button>
+                                        <button class="btn catalog" data-tip="Download catalog">
+                                            <i class="hgi hgi-stroke hgi-download-02"></i>
+                                        </button>
+                                        <div class="card-tooltip" id="cardTip1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pbc-cards">
+                                    <div class="pbc-img-section">
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
+                                    </div>
+                                    <div class="pbc-product-name">
+                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-603</h3></a>
+                                    </div>
+                                    <div class="specs-list">
+                                        <ul>
+                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
+                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                                            <li><span>Display :</span> <span>LED</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons-section">
+                                        <a href="productdescription.html">Explore</a>
+                                        <button class="btn cart" data-tip="Add to cart">
+                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                                        </button>
+                                        <button class="btn view" data-tip="View product">
+                                            <i class="hgi hgi-stroke hgi-view"></i>
+                            
+                                        </button>
+                                        <button class="btn catalog" data-tip="Download catalog">
+                                            <i class="hgi hgi-stroke hgi-download-02"></i>
+                                        </button>
+                                        <div class="card-tooltip" id="cardTip1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pbc-cards">
+                                    <div class="pbc-img-section">
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
+                                    </div>
+                                    <div class="pbc-product-name">
+                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
+                                    </div>
+                                    <div class="specs-list">
+                                        <ul>
+                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
+                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                                            <li><span>Display :</span> <span>LED</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons-section">
+                                        <a href="productdescription.html">Explore</a>
+                                        <button class="btn cart" data-tip="Add to cart">
+                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                                        </button>
+                                        <button class="btn view" data-tip="View product">
+                                            <i class="hgi hgi-stroke hgi-view"></i>
+                            
+                                        </button>
+                                        <button class="btn catalog" data-tip="Download catalog">
+                                            <i class="hgi hgi-stroke hgi-download-02"></i>
+                                        </button>
+                                        <div class="card-tooltip" id="cardTip1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pbc-cards">
+                                    <div class="pbc-img-section">
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
+                                    </div>
+                                    <div class="pbc-product-name">
+                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-605</h3></a>
+                                    </div>
+                                    <div class="specs-list">
+                                        <ul>
+                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
+                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                                            <li><span>Display :</span> <span>LED</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="buttons-section">
+                                        <a href="productdescription.html">Explore</a>
+                                        <button class="btn cart" data-tip="Add to cart">
+                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                                        </button>
+                                        <button class="btn view" data-tip="View product">
+                                            <i class="hgi hgi-stroke hgi-view"></i>
+                            
+                                        </button>
+                                        <button class="btn catalog" data-tip="Download catalog">
+                                            <i class="hgi hgi-stroke hgi-download-02"></i>
+                                        </button>
+                                        <div class="card-tooltip" id="cardTip1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="middle-footer">
+                <div div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4">
+                    
+                        <div class="footer-widget">
+                        <div class="logo-image">
+                            <a href="index.html"><img src="assets/images/chromlab.png" alt="chromlab Logo"></a>
+                            <p class="fwcominfo">Chromlab is a trusted supplier of quality laboratory and medical equipment for research, diagnostics, and healthcare.</p>
+                        </div>
+                        <ul class="fw-links">
+                            <li class="cuicons address">Address : <p> 123, Main Street, City, Country</p></li>
+                            <li class="cuicons mail">E-Mail :<a href="mailto:info@chromlab.com">info@chromlab.com</a></li>
+                            <li class="cuicons phone">Phone :<a href="tel:+1234567890">+1234567890</a></li>
+                            <li class="cuicons whatsappcu">Whatsapp :<a href="https://wa.me/1234567890">+1234567890</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="footer-widget">
+                        <h4 class="fw-title">Quick Links</h4>
+                        <ul class="fw-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="allcategories.html"> Chromlab Categories</a></li>
+                            <li><a href="allproduct.html"> Products</a></li>
+                            <li><a href="allcatalog.html">  Catalogs</a></li>
+                            <li><a href="aboutus.html"> About Us</a></li>
+                            <li><a href="contactus.html"> Contact Ust</a></li>
+                            <li><a href="myaccount.html"> My Accountt</a></li>
+                            <li><a href="sitemap.html">Site Map</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                    <div class="footer-widget">
+                        <h4 class="fw-title">Customer Service</h4>
+                        <ul class="fw-links">
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <!-- <li><a href="">Order Details</a></li> -->
+                        <li><a href="">Track My order</a></li>
+                        <li><a href="">Wishlist</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </div>
+                    </div>
+                    <div class="col-xl-4">
+                    <div class="footer-widget">
+                        <h4 class="fw-title">Newsletter</h4>
+                        <p class="fwp">Subscribe to our newsletter to get the latest updates and offers.</p>
+                        <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                        </form>
+                        <h4 class="fw-title mt-4">Contact on social media</h4>
+                        <div class="social-icons">
+                            <span class="fu"><p>Follow Us</p></span>
+                            <a href="#"><span class="fa facebook"></span></a>
+                            <a href="#"><span class="fa twitter"></span></a>
+                            <a href="#"><span class="fa instagram"></span></a>
+                            <a href="#"><span class="fa linkedin"></span></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                    <p class="copyright-text">© 2025 Chromlab. All Rights Reserved.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+       </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        // Simple dropdown/accordion behavior for sidebar categories [web:36][web:40]
+        document.addEventListener("DOMContentLoaded", () => {
+        const catButtons = document.querySelectorAll(".category-side-list .has-children");
+
+        catButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+            // Close other open items (accordion style)
+            catButtons.forEach(other => {
+                if (other !== btn) {
+                other.classList.remove("open");
+                }
+            });
+
+            // Toggle current
+            btn.classList.toggle("open");
+            });
+        });
+        });
+
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".chrom-cards, .hor-card, .pbc-cards"); // all cards
+
+      cards.forEach(card => {
+        const tooltip = card.querySelector(".card-tooltip");
+        const btns = card.querySelectorAll(".buttons-section .btn");
+
+        if (!tooltip || !btns.length) return;
+
+        btns.forEach(btn => {
+          const text = btn.getAttribute("data-tip");
+
+          btn.addEventListener("mouseenter", () => {
+            tooltip.textContent = text;
+            tooltip.classList.add("show");
+          });
+
+          btn.addEventListener("mouseleave", () => {
+            tooltip.classList.remove("show");
+          });
+        });
+
+        const buttonsSection = card.querySelector(".buttons-section");
+        buttonsSection.addEventListener("mouseleave", () => {
+          tooltip.classList.remove("show");
+        });
+      });
+    });
+    </script>
+</body>
+
+</html>
