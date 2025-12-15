@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Error | www.chromelab.com</title>
+    <title>Cart | www.chromelab.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
@@ -120,14 +120,143 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item bi-home"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Error</li>
+                    <li class="breadcrumb-item active" aria-current="page">cart</li>
                 </ol>
             </nav>
         </section>
-        <section class="error-section">
-            <div class="background-img">
-                <img src="assets/images/error1.jpg" alt="">
-                <a href="index.html" class="bth">Back to Home</a>
+        <section class="cart-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="cart-table">
+                        <!-- <h3>Order Cart</h3> -->
+                        <table class="order-table">
+                            <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Remove</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="order-tr">
+                                <td class="product-image-cell" style="position:relative;">
+                                        <img src="assets/images/products/automatic-fraction-collector.jpg" alt="Product 1" class="product-image" />
+                                    <a href="productdescription.html">Automatic Fraction Collector CLFC-401</a>
+                                </td>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="50">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 50.00</td>
+                                <td class="line-total">£ 100.00</td>
+                                <td>
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Automatic Fraction Collector CLFC-401">&times;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <!-- <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Class II A2 Biological Safety Cabinets">&times;</button> -->
+                                        <img src="assets/images/products/element-analyzer.jpg" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Element Analyzer CLEA-101</a>      
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="80">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 80.00</td>
+                                <td class="line-total">£ 80.00</td>
+                                <td>
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Element Analyzer CLEA-101">&times;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <!-- <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Digital Cooking Oil Tester OT-100">&times;</button> -->
+                                        <img src="assets/images/products/gas-chromatography.jpg" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Gas Chromatography CLGC-601</a>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="68">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 68.00</td>
+                                <td class="line-total">£ 68.00</td>
+                                <td>
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Gas Chromatography CLGC-601">&times;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-image-cell" style="position:relative;">
+                                    <!-- <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Laboratory Glassware Washers TGW-5000">&times;</button> -->
+                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="Product 2" class="product-image" />
+                                    <a href="productdescription.html">Ion Chromatograph CLIC-601</a>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="qty-btn minus">−</button>
+                                            <input class="qty-input" value="1" min="1" data-price="220">
+                                        <button type="button" class="qty-btn plus">+</button>
+                                    </div>
+                                </td>
+                                <td>£ 220.00</td>
+                                <td class="line-total">£ 220.00</td>
+                                <td>
+                                    <button type="button" class="remove-btn" aria-label="Remove product" title="Remove : Ion Chromatograph CLIC-601">&times;</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="order-summery">
+                            <!-- <h3>CART TOTALS</h3> -->
+                            <div class="summary-details">
+                                <p>Subtotal: <span id="subtotal">£</span></p>
+                                <div class="shipping-options">
+                                    <div>
+                                        <label class="shipping-label">
+                                        <input type="radio" name="shipping" value="10" checked>
+                                        Flat rate (Delivery time: 2-10): <span class="shipping-rate">£ 10.00</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="shipping-label">
+                                        <input type="radio" name="shipping" value="20">
+                                        Parcelforce (Delivery time: 2 Days): <span class="shipping-rate">£20.00</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="shipping-label">
+                                        <input type="radio" name="shipping" value="300">
+                                        PalletWays (Delivery time: 3-4 days): <span class="shipping-rate">£ 300.00</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- <p style="margin-top: 12px; color: #888; font-size: 0.95rem;">
+                                    Shipping options will be updated during checkout.
+                                </p> -->
+                                <!-- <p style="color:#009bcc; margin:12px 0; cursor:pointer;">Calculate shipping</p> -->
+                                <hr />
+                                <p><strong>Total: <span id="total">£</span></strong></p>
+                                <a class="btn-checkout-cart" href="checkout.html">PROCEED TO CHECKOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
        <footer>
@@ -214,7 +343,80 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
+    <script>
+        function formatCurrency(amount, symbol = "£ ") {
+        return symbol + amount.toFixed(2);
+        }
+
+        function getShippingValue() {
+        let shipping = 0;
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+            if (radio.checked) shipping = parseFloat(radio.value);
+        });
+        return isNaN(shipping) ? 0 : shipping;
+        }
+
+        function calculateTotals() {
+        let subtotal = 0;
+        // Get all current visible qty inputs
+        document.querySelectorAll('.qty-input').forEach(input => {
+            const price = parseFloat(input.dataset.price);
+            let qty = parseInt(input.value, 10);
+            if (isNaN(qty) || qty < 1) {
+            qty = 1;
+            input.value = qty;
+            }
+            const lineTotal = price * qty;
+            // Update the line total for this row
+            input.closest('tr').querySelector('.line-total').textContent = formatCurrency(lineTotal, '£ ');
+            subtotal += lineTotal;
+        });
+
+        document.getElementById('subtotal').textContent = formatCurrency(subtotal, '£ ');
+        const shipping = getShippingValue();
+        const total = subtotal + shipping;
+        document.getElementById('total').textContent = formatCurrency(total, '£ ');
+        }
+
+        // Attach listeners for quantity controls (+/- and direct input)
+        document.querySelectorAll('.quantity-control').forEach(control => {
+        const input = control.querySelector('.qty-input');
+        const minus = control.querySelector('.minus');
+        const plus = control.querySelector('.plus');
+        minus.addEventListener('click', () => {
+            let val = parseInt(input.value, 10) || 1;
+            if (val > parseInt(input.min, 10)) {
+            input.value = val - 1;
+            input.dispatchEvent(new Event('input'));
+            }
+        });
+        plus.addEventListener('click', () => {
+            let val = parseInt(input.value, 10) || 1;
+            input.value = val + 1;
+            input.dispatchEvent(new Event('input'));
+        });
+        input.addEventListener('input', calculateTotals);
+        });
+
+        // Attach listeners for shipping options
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+        radio.addEventListener('change', calculateTotals);
+        });
+
+        // Remove product functionality
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const row = btn.closest('tr');
+            row.parentNode.removeChild(row); // Remove row
+            calculateTotals(); // Recalculate totals
+        });
+        });
+
+        // Calculate totals on page load
+        window.addEventListener('DOMContentLoaded', calculateTotals);
+
+
+    </script>
 
   </body>
 </html>
