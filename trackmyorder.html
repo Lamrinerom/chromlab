@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register | www.chromelab.com</title>
+    <title>Track My Order | www.chromelab.com</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="chromelab-section">
-     <header class="main-header">
+      <header class="main-header">
           <div class="top-header">
               <div class="container-fluid">
                   <div class="row">
@@ -46,7 +46,7 @@
                               </div>
                           </div>
                       </div>
-                      <div class="col-xl-3 col-lg-4 co l-md-6 col-sm-6 col-6 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3 cartsection">
+                      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3 cartsection">
                           <div class="user-services">
                               <a href="login.html" class="account-section mt-2">
                                   <div class="icon1"><i class="hgi hgi-stroke hgi-user-list"></i></div>
@@ -58,7 +58,7 @@
                                                   <div class="infouser">
                                                     <div class="mb-3">
                                                       <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
-                                                      <input type="email"  class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                                     </div>
                                                   </div> 
                                               </li>
@@ -120,143 +120,27 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item bi-home"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Track My Order</li>
                 </ol>
             </nav>
         </section>
-        <section class="profile-section">
-            <div class="profile-container">
-                <!-- Sidebar profile card -->
-                <aside class="profile-card">
-                <div class="avatar-wrapper">
-                    <img id="avatarPreview" src="assets/images/Blank-Profile-Photo.jpg" alt="User avatar">
-                    <label for="avatarInput" class="avatar-upload-btn">Change photo</label>
-                    <input type="file" id="avatarInput" accept="image/*">
+        <section class="tmo-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="tmo-form-section">
+                        <form class="tmo-form" autocomplete="on" aria-label="tmo Form">
+                        <span>Enter Your Order Details</span>
+                        <div class="fc-sec">
+                            <label for="tmotmo" class="form-label cuformfl">Order ID</label>
+                            <input type="text" class="form-control fcip" id="tmotmo" name="tmo" autocomplete="tmo" placeholder="Enter your order ID">
+                        </div>
+                        <button type="submit" class="cuform" aria-label="Submit tmo">Track Order</button>
+                        </form>
+                        <div id="tmo-message" class="tmo-message"></div>
+                    </div>
                 </div>
-
-                <h2 class="profile-name" id="profileNameDisplay">John Doe</h2>
-                <p class="profile-email" id="profileEmailDisplay">you@example.com</p>
-                <p class="profile-role">Laboratory Engineer</p>
-
-                <ul class="profile-stats">
-                    <li><span>Enquiries</span><strong>12</strong></li>
-                    <li><span>Orders</span><strong>5</strong></li>
-                    <li><span>Wishlist</span><strong>9</strong></li>
-                </ul>
-                </aside>
-
-                <!-- Main content -->
-                <main class="profile-main">
-                <div class="profile-tabs">
-                    <button class="tab-btn active" data-tab="details">Account details</button>
-                    <button class="tab-btn" data-tab="address">Address</button>
-                    <button class="tab-btn" data-tab="notifications">Notifications</button>
-                </div>
-
-                <!-- Account details -->
-                <div class="tab-panel active" id="tab-details">
-                    <h3>Account details</h3>
-                    <form id="detailsForm" class="form-grid">
-                    <div class="form-group">
-                        <label for="fullName">Full name</label>
-                        <input type="text" id="fullName" value="John Doe">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" value="you@example.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" placeholder="+1 98765 43210">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="company">Company / Lab</label>
-                        <input type="text" id="company" placeholder="Chromlab Research Pvt. Ltd.">
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="bio">About you</label>
-                        <textarea id="bio" rows="3" placeholder="Tell us briefly about your role and interests."></textarea>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" id="discardDetails">Discard</button>
-                        <button type="submit" class="btn-primary">Save changes</button>
-                    </div>
-                    </form>
-                </div>
-
-                <!-- Address -->
-                <div class="tab-panel" id="tab-address">
-                    <h3>Default shipping address</h3>
-                    <form id="addressForm" class="form-grid">
-                    <div class="form-group full-width">
-                        <label for="addressLine">Address line</label>
-                        <input type="text" id="addressLine" placeholder="423B, American Road">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" id="city" placeholder="Nashville">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="state">State / Region</label>
-                        <input type="text" id="state" placeholder="TN">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="zip">ZIP / Postal code</label>
-                        <input type="text" id="zip" placeholder="37209">
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="country">Country</label>
-                        <input type="text" id="country" value="United States">
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" id="discardAddress">Discard</button>
-                        <button type="submit" class="btn-primary">Save address</button>
-                    </div>
-                    </form>
-                </div>
-
-                <!-- Notifications -->
-                <div class="tab-panel" id="tab-notifications">
-                    <h3>Notification preferences</h3>
-                    <form id="notifyForm" class="notify-list">
-                    <label class="switch-row">
-                        <span>Product updates &amp; offers</span>
-                        <input type="checkbox" id="notifOffers" checked>
-                        <span class="switch"></span>
-                    </label>
-                    <label class="switch-row">
-                        <span>Order status alerts</span>
-                        <input type="checkbox" id="notifOrders" checked>
-                        <span class="switch"></span>
-                    </label>
-                    <label class="switch-row">
-                        <span>Service &amp; maintenance reminders</span>
-                        <input type="checkbox" id="notifService">
-                        <span class="switch"></span>
-                    </label>
-
-                    <div class="form-actions">
-                        <button type="button" class="btn-secondary" id="discardNotif">Discard</button>
-                        <button type="submit" class="btn-primary">Save preferences</button>
-                    </div>
-                    </form>
-                </div>
-
-                <p class="save-message" id="saveMessage"></p>
-                </main>
             </div>
         </section>
-
        <footer>
          <div class="middle-footer">
             <div div class="container-fluid">
@@ -285,8 +169,8 @@
                         <li><a href="allproduct.html"> Products</a></li>
                         <li><a href="allcatalog.html">  Catalogs</a></li>
                         <li><a href="aboutus.html"> About Us</a></li>
-                        <li><a href="contactus.html"> Contact Us</a></li>
-                        <li><a href="login.html"> My Account</a></li>
+                        <li><a href="contactus.html"> Contact Ust</a></li>
+                        <li><a href="myaccount.html"> My Accountt</a></li>
                         <li><a href="sitemap.html">Site Map</a></li>
                       </ul>
                     </div>
@@ -342,85 +226,24 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
-       document.addEventListener("DOMContentLoaded", () => {
-        // Tabs
-        const tabButtons = document.querySelectorAll(".tab-btn");
-        const tabPanels = document.querySelectorAll(".tab-panel");
+        // ------------------------------track my order
 
-        tabButtons.forEach(btn => {
-            btn.addEventListener("click", () => {
-            const target = btn.dataset.tab;
-
-            tabButtons.forEach(b => b.classList.remove("active"));
-            tabPanels.forEach(p => p.classList.remove("active"));
-
-            btn.classList.add("active");
-            document.getElementById(`tab-${target}`).classList.add("active");
-            });
-        });
-
-        // Avatar preview
-        const avatarInput = document.getElementById("avatarInput");
-        const avatarPreview = document.getElementById("avatarPreview");
-
-        avatarInput.addEventListener("change", (e) => {
-            const file = e.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = (ev) => {
-            avatarPreview.src = ev.target.result;
-            };
-            reader.readAsDataURL(file);
-        });
-
-        // Sync name/email to sidebar
-        const fullName = document.getElementById("fullName");
-        const email = document.getElementById("email");
-        const nameDisplay = document.getElementById("profileNameDisplay");
-        const emailDisplay = document.getElementById("profileEmailDisplay");
-
-        fullName.addEventListener("input", () => {
-            nameDisplay.textContent = fullName.value || "John Doe";
-        });
-        email.addEventListener("input", () => {
-            emailDisplay.textContent = email.value || "you@example.com";
-        });
-
-        const saveMessage = document.getElementById("saveMessage");
-
-        function showSaved(message) {
-            saveMessage.textContent = message;
-            setTimeout(() => (saveMessage.textContent = ""), 3000);
+        document.querySelector('.tmo-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const orderId = document.getElementById('tmotmo').value.trim();
+        const messageDiv = document.getElementById('tmo-message');
+        if (orderId === '') {
+            messageDiv.textContent = 'Please enter your order ID.';
+            messageDiv.className = 'tmo-message show';
+            messageDiv.style.backgroundColor = 'rgb(226, 246, 226)';
+            messageDiv.style.color = 'rgb(42, 143, 45)';
+        } else {
+            messageDiv.textContent = 'Tracking order: ' + orderId;
+            messageDiv.className = 'tmo-message show';
+            messageDiv.style.backgroundColor = '#d4edda';
+            messageDiv.style.color = '#155724';
         }
-
-        // Forms: simple “saved” demo
-        document.getElementById("detailsForm").addEventListener("submit", (e) => {
-            e.preventDefault();
-            showSaved("Profile details saved.");
-        });
-
-        document.getElementById("addressForm").addEventListener("submit", (e) => {
-            e.preventDefault();
-            showSaved("Address updated.");
-        });
-
-        document.getElementById("notifyForm").addEventListener("submit", (e) => {
-            e.preventDefault();
-            showSaved("Notification preferences saved.");
-        });
-
-        // Discard buttons just reset forms for now
-        document.getElementById("discardDetails").addEventListener("click", () => {
-            document.getElementById("detailsForm").reset();
-        });
-        document.getElementById("discardAddress").addEventListener("click", () => {
-            document.getElementById("addressForm").reset();
-        });
-        document.getElementById("discardNotif").addEventListener("click", () => {
-            document.getElementById("notifyForm").reset();
-        });
         });
     </script>
-
   </body>
 </html>
