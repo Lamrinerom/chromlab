@@ -91,34 +91,61 @@
                           </div>
                       </div>
                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3 cartsection">
-                          <div class="user-services">
-                              <a href="login.html" class="account-section" title="Login">
-                                  <div class="icon1"><i class="hgi hgi-stroke hgi-user-list"></i></div>
-                                  <div class="accontent">
-                                      <!-- <span class="sn">Sign In</span> -->
-                                      <!-- <div class="acc dropdown-toggle"><span>Login</span></div> -->
-                                          <!-- <ul class="dropdown-menu d-block">
-                                              <li>
-                                                  <div class="infouser">
-                                                    <div class="mb-3">
-                                                      <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
-                                                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                                    </div>
-                                                  </div> 
-                                              </li>
-                                              <li><a href="login.html" class="dromain">Login</a></li> 
-                                          </ul> -->
+                        <div class="user-services">
+                          <a href="login.html" class="account-section" title="Login">
+                            <div class="icon1"><i class="hgi hgi-stroke hgi-user-list"></i></div>
+                            <div class="accontent">
+                                <!-- <span class="sn">Sign In</span> -->
+                                <!-- <div class="acc dropdown-toggle"><span>Login</span></div> -->
+                                    <!-- <ul class="dropdown-menu d-block">
+                                        <li>
+                                            <div class="infouser">
+                                              <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                              </div>
+                                            </div> 
+                                        </li>
+                                        <li><a href="login.html" class="dromain">Login</a></li> 
+                                    </ul> -->
+                            </div>
+                          </a>
+                          <a href="wishlist.html" class="account-section" title="Wishlist">
+                            <div class="icon2"></div>
+                            <div class="count-heart" id="wishlistCount">0</div>
+                          </a>
+                          <a href="#" class="account-section" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
+                            <div class="count-cart" id="cartCount">0</div>
+                          </a>
+                          <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+                              <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                                <div id="cartItemsContainer">
+                                  <!-- Dynamic cart items will appear here -->
+                                  <div class="empty-cart">
+                                    <i class="hgi hgi-stroke hgi-shopping-bag-01" style="font-size: 48px; color: #ccc;"></i>
+                                    <p>Your cart is empty</p>
                                   </div>
-                              </a>
-                              <a href="wishlist.html" class="account-section" title="Wishlist">
-                                  <div class="icon2"></div>
-                                  <div class="count-heart">0</div>
-                              </a>
-                              <a href="cart.html" class="account-section" title="View Cart">
-                                  <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
-                                  <div class="count-cart">0</div>
-                              </a>       
-                          </div>
+                                </div>
+                                
+                                <div class="cart-footer" style="display: none;">
+                                  <div class="cart-total">
+                                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                  </div>
+                                  <div class="cart-actions">
+                                    <a href="cart.html" class="btn btn-outline-primary w-100 mb-2">View Cart</a>
+                                    <a href="checkout.html" class="btn btn-primary w-100">Checkout</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>      
+                        </div>
                       </div>
                   </div>
               </div>
@@ -168,7 +195,7 @@
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Gas Chromatograph-Mass Spectrometer</a>
                           <div class="mega-menu">
-                            <div class="mega-column">ca
+                            <div class="mega-column">
                               <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
@@ -466,15 +493,15 @@
         <div class="container-fluid">
           <h1 class="section-title">Top Selling</h1>
           <div class="row mb-4">
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
               <div class="ban-pro">
                 <h3><a href="">Fraction Collector</a></h3>
                 <img src="assets/images/automatic-fraction-collector.png" alt="">
               </div>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6">
               <div class="hold-carousel">
-                <div class="chrom-cards">
+                <div class="chrom-cards" data-product-id="p001" data-id="p1" data-name="Automatic Fraction Collector CLFC-401" data-price="15000">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                   </div>
@@ -499,17 +526,16 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
-        
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
-                <div class="chrom-cards">
+                <div class="chrom-cards" data-product-id="p002" data-id="p2" data-name="Automatic Fraction Collector CLFC-402" data-price="15000">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-402</h3></a>
                   </div>
@@ -534,11 +560,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -569,11 +595,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -603,11 +629,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -637,11 +663,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -651,13 +677,13 @@
             </div>
           </div>
           <div class="row mb-4">
-            <div class="col-xl-3">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
               <div class="ban-pro">
                 <h3><a href="">Ion Chromatograph</a></h3>
                 <img src="assets/images/ionchrom.png" alt="">
               </div>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6">
               <div class="hold-carousel">
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
@@ -683,11 +709,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -717,11 +743,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -752,11 +778,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -787,11 +813,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -822,11 +848,11 @@
                     <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="View product">
-                      <i class="hgi hgi-stroke hgi-view"></i>
+                    <button class="btn view" data-tip="Wishlist">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
-                    <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
                     </button>
                       <div class="card-tooltip" id="cardTip1"></div>
@@ -854,7 +880,7 @@
         </div>
         <div class="tab-content" id="pills-tabContent">
           <div class="row tab-pane fade show active mt-4" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab" tabindex="0">
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider9">
                   <div class="chrom-slider" >
@@ -893,18 +919,18 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider10">
                   <div class="chrom-slider" >
@@ -943,8 +969,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -955,7 +981,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider11">
                   <div class="chrom-slider" >
@@ -994,8 +1020,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1006,7 +1032,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider12">
                   <div class="chrom-slider" >
@@ -1045,8 +1071,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1057,9 +1083,59 @@
                 </div>
               </div>
             </div>
+            <div class="cust-col-tab">
+             <div class="chrom-cards">
+                <div class="chrom-img-section" id="chromSlider9">
+                  <div class="chrom-slider" >
+                    <div class="chrom-slides">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
+                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
+                    </div>
+
+                    <!-- <div class="chrom-dots">
+                      <button class="chrom-dot active" data-index="0"></button>
+                      <button class="chrom-dot" data-index="1"></button>
+                      <button class="chrom-dot" data-index="2"></button>
+                    </div> -->
+                  </div>
+                  <div class="chrom-dots">
+                      <button class="chrom-dot active" data-index="0"></button>
+                      <button class="chrom-dot" data-index="1"></button>
+                      <button class="chrom-dot" data-index="2"></button>
+                    </div>
+                </div>
+                <div class="chrom-product-name">
+                  <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
+                </div>
+                <div class="specs-list">
+                  <ul>
+                    <li><span>Tube quantity :</span> <span>100</span></li>
+                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                    <li><span>Display :</span> <span>LED</span></li>
+                  </ul>
+                </div>
+                <div class="buttons-section">
+                  <a href="productdescription.html">Explore</a>
+                  <button class="btn cart" data-tip="Add to cart">
+                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                  
+                  </button>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
+      
+                  </button>
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                    <i class="hgi hgi-stroke hgi-download-02"></i>
+                  </button>
+                    <div class="card-tooltip" id="cardTip1"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row tab-pane fade show mt-4" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab" tabindex="0">
-              <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider13">
                   <div class="chrom-slider" >
@@ -1098,8 +1174,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1110,7 +1186,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider14">
                   <div class="chrom-slider" >
@@ -1149,8 +1225,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1161,7 +1237,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider15">
                   <div class="chrom-slider" >
@@ -1200,8 +1276,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1212,7 +1288,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="cust-col-tab">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider16">
                   <div class="chrom-slider" >
@@ -1251,8 +1327,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1263,6 +1339,56 @@
                 </div>
               </div>
             </div>
+            <div class="cust-col-tab">
+             <div class="chrom-cards">
+                <div class="chrom-img-section" id="chromSlider13">
+                  <div class="chrom-slider" >
+                    <div class="chrom-slides">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
+                    </div>
+
+                    <!-- <div class="chrom-dots">
+                      <button class="chrom-dot active" data-index="0"></button>
+                      <button class="chrom-dot" data-index="1"></button>
+                      <button class="chrom-dot" data-index="2"></button>
+                    </div> -->
+                  </div>
+                  <div class="chrom-dots">
+                      <button class="chrom-dot active" data-index="0"></button>
+                      <button class="chrom-dot" data-index="1"></button>
+                      <button class="chrom-dot" data-index="2"></button>
+                    </div>
+                </div>
+                <div class="chrom-product-name">
+                  <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
+                </div>
+                <div class="specs-list">
+                  <ul>
+                    <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
+                    <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
+                    <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
+                    <li><span>Baseline Drift :</span> <span>≤ 3% FS/30 min</span></li>
+                  </ul>
+                </div>
+                <div class="buttons-section">
+                  <a href="productdescription.html">Explore</a>
+                  <button class="btn cart" data-tip="Add to cart">
+                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                  
+                  </button>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
+      
+                  </button>
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                    <i class="hgi hgi-stroke hgi-download-02"></i>
+              
+                  </button>
+                    <div class="card-tooltip" id="cardTip1"></div>
+                </div>
+              </div>
           </div>
         </div>
        </section>
@@ -1270,7 +1396,7 @@
         <div class="container-fluid">
           <h1 class="section-title">Featured Product</h1>
           <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
               <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider1">
                   <div class="chrom-slider" >
@@ -1308,18 +1434,18 @@
                   <button class="btn cart" data-tip="Add to cart">
                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider2">
                   <div class="chrom-slider" >
@@ -1357,8 +1483,8 @@
                   <button class="btn cart" data-tip="Add to cart">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1369,7 +1495,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider3">
                   <div class="chrom-slider" >
@@ -1408,8 +1534,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1420,7 +1546,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider4">
                   <div class="chrom-slider" >
@@ -1459,8 +1585,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1471,7 +1597,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider5">
                   <div class="chrom-slider" >
@@ -1510,8 +1636,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1522,7 +1648,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider6">
                   <div class="chrom-slider" >
@@ -1561,8 +1687,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1573,7 +1699,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider7">
                   <div class="chrom-slider" >
@@ -1612,8 +1738,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1624,7 +1750,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="feat-col">
              <div class="chrom-cards">
                 <div class="chrom-img-section" id="chromSlider8">
                   <div class="chrom-slider" >
@@ -1663,8 +1789,8 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -1682,7 +1808,7 @@
        <section class="top-rated">
         <div class="container-fluid">
           <h1 class="section-title">Top Rated Product</h1>
-          <div class="row">
+          <div class="trp-carousel">
             <div class="col-xl-4 col-lg-6 col-md-6">
               <div class="hor-card">
                 <div class="name-hor">
@@ -1705,11 +1831,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1738,11 +1864,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1771,11 +1897,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1804,11 +1930,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1837,11 +1963,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1870,11 +1996,11 @@
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="View product">
-                    <i class="hgi hgi-stroke hgi-view"></i>
+                  <button class="btn view" data-tip="Wishlist">
+                    <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
-                  <button class="btn catalog" data-tip="Download catalog" onclick="window.location.href='singlecatalog.html'">
+                  <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
                   </button>
                     <div class="card-tooltip" id="cardTip1"></div>
@@ -1964,6 +2090,7 @@
          </div>
        </footer>
     </div>
+    <script src="assets/js/atcw.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -1994,7 +2121,7 @@
                   },
                   {
                       breakpoint: 480,
-                      settings: { slidesToShow: 1 }
+                      settings: { slidesToShow: 2 }
                   }
               ]
           });
@@ -2185,6 +2312,46 @@
                   },
                   {
                       breakpoint: 1200,
+                      settings: { slidesToShow: 3 }
+                  },
+                  {
+                      breakpoint: 991,
+                      settings: { slidesToShow: 2 }
+                  },
+                  {
+                      breakpoint: 768,
+                      settings: { slidesToShow: 1 }
+                  },
+                  {
+                      breakpoint: 480,
+                      settings: { slidesToShow: 1 }
+                  }
+              ]
+          });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('.trp-carousel').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: true, // Enable navigation arrows
+              autoplay: false,
+              autoplaySpeed: 8500, // Slide every 2.5 seconds (customize as needed)
+              prevArrow: '<button type="button" class="slick-prev" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; left: -40px; z-index: 3;"></button>',
+              nextArrow: '<button type="button" class="slick-next" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 45%; right: -40px; z-index: 3;"></button>',
+              responsive: [ 
+                {
+                      breakpoint: 1400,
+                      settings: { slidesToShow: 3 }
+                  },
+                  {
+                      breakpoint: 1200,
+                      settings: { slidesToShow: 3 }
+                  },
+                  {
+                      breakpoint: 991,
                       settings: { slidesToShow: 2 }
                   },
                   {
@@ -2193,11 +2360,196 @@
                   },
                   {
                       breakpoint: 480,
-                      settings: { slidesToShow: 2 }
+                      settings: { slidesToShow: 1 }
                   }
               ]
           });
       });
+    </script>
+    <script>
+      // === CART STORAGE HELPERS ===
+function loadCart() {
+  return JSON.parse(localStorage.getItem('cart')) || {};
+}
+
+function saveCart(cart) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function getCartItemCount(cart) {
+  return Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+}
+
+function getCartTotal(cart) {
+  return Object.values(cart).reduce((sum, item) => sum + (item.price * item.qty), 0);
+}
+
+// === OFFCANVAS RENDERING ===
+function renderCartItems() {
+  const cart = loadCart();
+  const container = document.getElementById('cartItemsContainer');
+  const footer = document.querySelector('.cart-footer');
+  
+  if (!container) return;
+
+  // Clear existing items
+  container.innerHTML = '';
+
+  if (Object.keys(cart).length === 0) {
+    container.innerHTML = `
+      <div class="empty-cart">
+        <i class="hgi hgi-stroke hgi-shopping-bag-01" style="font-size: 48px; color: #ccc;"></i>
+        <p>Your cart is empty</p>
+      </div>
+    `;
+    if (footer) footer.style.display = 'none';
+    return;
+  }
+
+  // Render each cart item
+  Object.values(cart).forEach(item => {
+    const itemHtml = `
+      <div class="cart-item" data-product-id="${item.id}">
+        <div class="cart-item-image" style="background-image: url('https://via.placeholder.com/60?text=${item.id}')"></div>
+        <div class="cart-item-details">
+          <h6 class="cart-item-title">${item.title}</h6>
+          <p class="cart-item-price">$${item.price.toFixed(2)} x ${item.qty}</p>
+          <div class="quantity-controls">
+            <button class="quantity-btn qty-minus" data-id="${item.id}">-</button>
+            <input type="number" class="quantity-input" value="${item.qty}" min="1" data-id="${item.id}">
+            <button class="quantity-btn qty-plus" data-id="${item.id}">+</button>
+            <span class="remove-item" data-id="${item.id}">×</span>
+          </div>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', itemHtml);
+  });
+
+  // Show footer with total
+  if (footer) {
+    document.getElementById('cartTotal').textContent = getCartTotal(cart).toFixed(2);
+    footer.style.display = 'block';
+  }
+}
+
+// === CART OPERATIONS ===
+function addToCart(product) {
+  const cart = loadCart();
+  
+  if (cart[product.id]) {
+    cart[product.id].qty += product.qty || 1;
+  } else {
+    cart[product.id] = { ...product, qty: product.qty || 1 };
+  }
+  
+  saveCart(cart);
+  updateHeaderCounters();
+  
+  // Show success tooltip (if you have one)
+  showToast('Added to cart!');
+}
+
+function updateCartQuantity(id, qty) {
+  const cart = loadCart();
+  if (cart[id] && qty > 0) {
+    cart[id].qty = qty;
+    saveCart(cart);
+    renderCartItems();
+    updateHeaderCounters();
+  } else if (qty <= 0) {
+    removeFromCart(id);
+  }
+}
+
+function removeFromCart(id) {
+  const cart = loadCart();
+  delete cart[id];
+  saveCart(cart);
+  renderCartItems();
+  updateHeaderCounters();
+}
+
+// === EVENT DELEGATION (works for dynamic offcanvas items) ===
+document.addEventListener('click', (e) => {
+  // Add to cart button
+  if (e.target.closest('.btn-add-cart')) {
+    const card = e.target.closest('.product-card');
+    const product = {
+      id: card.dataset.id,
+      title: card.dataset.title,
+      price: Number(card.dataset.price) || 0,
+      qty: 1
+    };
+    addToCart(product);
+    return;
+  }
+
+  // Offcanvas quantity controls
+  if (e.target.matches('.qty-plus, .qty-minus')) {
+    const id = e.target.dataset.id;
+    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
+    const currentQty = parseInt(input.value) || 1;
+    const newQty = e.target.classList.contains('qty-plus') ? currentQty + 1 : currentQty - 1;
+    updateCartQuantity(id, newQty);
+  }
+
+  // Remove item
+  if (e.target.matches('.remove-item')) {
+    const id = e.target.dataset.id;
+    if (confirm('Remove this item?')) {
+      removeFromCart(id);
+    }
+  }
+
+  // Toggle offcanvas (if using Bootstrap)
+  if (e.target.matches('[data-bs-toggle="offcanvas"]')) {
+    setTimeout(renderCartItems, 100); // Render after animation
+  }
+});
+
+document.addEventListener('input', (e) => {
+  if (e.target.matches('.quantity-input')) {
+    const id = e.target.dataset.id;
+    const qty = parseInt(e.target.value) || 1;
+    updateCartQuantity(id, qty);
+  }
+});
+
+// === INIT ===
+document.addEventListener('DOMContentLoaded', () => {
+  updateHeaderCounters();
+  renderCartItems();
+});
+
+function updateHeaderCounters() {
+  const cart = loadCart();
+  const cartCountEl = document.querySelector('#cartCount, .cart-count');
+  const wishCountEl = document.querySelector('#wishlistCount, .wishlist-count');
+  
+  if (cartCountEl) cartCountEl.textContent = getCartItemCount(cart);
+  if (wishCountEl) wishCountEl.textContent = loadWishlist().length;
+}
+
+function showToast(message) {
+  // Simple toast notification
+  const toast = document.createElement('div');
+  toast.style.cssText = `
+    position: fixed; top: 20px; right: 20px; 
+    background: #10b981; color: white; padding: 12px 20px;
+    border-radius: 8px; z-index: 9999; transform: translateX(400px);
+    transition: transform 0.3s ease;
+  `;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => toast.style.transform = 'translateX(0)', 100);
+  setTimeout(() => {
+    toast.style.transform = 'translateX(400px)';
+    setTimeout(() => toast.remove(), 300);
+  }, 2000);
+}
+
     </script>
   </body>
 </html>
