@@ -110,41 +110,53 @@
                                     </ul> -->
                             </div>
                           </a>
-                          <a href="wishlist.html" class="account-section" title="Wishlist">
+                          <a href="wishlist.html" class="account-section" title="Wishlist" id="wishlistToggle">
                             <div class="icon2"></div>
                             <div class="count-heart" id="wishlistCount">0</div>
                           </a>
+                          <div class="wishlist-dropdown" id="wishlistDropdown">
+                              <div class="wishlist-header">
+                                  <h6>Wishlist <span class="badge bg-primary wishlistnumber" id="wishlistTotalCount">0</span></h6>
+                              </div>
+                              
+                              <div id="wishlistItemsContainer">
+                                  <div class="wishlist-empty">
+                                      <i class="hgi hgi-stroke hgi-heart-remove"></i>
+                                      <p>Your wishlist is empty</p>
+                                  </div>
+                              </div>
+                              
+                              <div class="wishlist-footer" style="display: none;">
+                                  <a href="wishlist.html" class="wishlist-link">View All Items →</a>
+                              </div>
+                          </div>
                           <a href="#" class="account-section" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
                             <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
                             <div class="count-cart" id="cartCount">0</div>
-                          </a>
-                          <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-                              <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                         </a>
+                         <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasCart" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="offcanvasCartLabel">
+                              <div class="offcanvas-header cart-head">
+                                <button type="button" class="btn-close cart-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                  <h5 class="offcanvas-title" id="offcanvasCartLabel">Shopping Cart</h5>
                               </div>
-                              <div class="offcanvas-body">
-                                <div id="cartItemsContainer">
-                                  <!-- Dynamic cart items will appear here -->
-                                  <div class="empty-cart">
-                                    <i class="hgi hgi-stroke hgi-shopping-bag-01" style="font-size: 48px; color: #ccc;"></i>
-                                    <p>Your cart is empty</p>
+                              <div class="offcanvas-body cart-body">
+                                  <div id="cartItemsContainer">
+                                      <div class="empty-cart">
+                                          <i class="hgi hgi-stroke hgi-shopping-bag-01" style="font-size: 48px; color: #ccc;"></i>
+                                          <p>Your cart is empty</p>
+                                      </div>
                                   </div>
-                                </div>
-                                
-                                <div class="cart-footer" style="display: none;">
-                                  <div class="cart-total">
-                                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                  <div class="cart-footer" style="display: none;">
+                                      <div class="cart-total">
+                                          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                      </div>
+                                      <div class="cart-actions">
+                                          <a href="cart.html" class="btn btn-outline-primary">View Cart</a>
+                                          <a href="checkout.html" class="btn co">Checkout</a>
+                                      </div>
                                   </div>
-                                  <div class="cart-actions">
-                                    <a href="cart.html" class="btn btn-outline-primary w-100 mb-2">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-primary w-100">Checkout</a>
-                                  </div>
-                                </div>
                               </div>
                             </div>
-                          </div>      
                         </div>
                       </div>
                   </div>
@@ -363,7 +375,7 @@
                   </nav>
                   <div class="mail-section">
                     <span class="iconmail"></span>
-                    <a href="mailto:info@chromlab.com">Sale! 30% OFF!</a>
+                    <a href="allcategory.html">Sale! 30% OFF!</a>
                   </div>
                   </div>
                 </div>
@@ -493,15 +505,15 @@
         <div class="container-fluid">
           <h1 class="section-title">Top Selling</h1>
           <div class="row mb-4">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
               <div class="ban-pro">
                 <h3><a href="">Fraction Collector</a></h3>
                 <img src="assets/images/automatic-fraction-collector.png" alt="">
               </div>
             </div>
-            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
               <div class="hold-carousel">
-                <div class="chrom-cards" data-product-id="p001" data-id="p1" data-name="Automatic Fraction Collector CLFC-401" data-price="15000">
+                <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                   </div>
@@ -512,7 +524,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 299.99</span><span>500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -523,10 +537,13 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-401"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
@@ -535,7 +552,7 @@
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
-                <div class="chrom-cards" data-product-id="p002" data-id="p2" data-name="Automatic Fraction Collector CLFC-402" data-price="15000">
+                <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-402</h3></a>
                   </div>
@@ -546,7 +563,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 399.99</span><span>500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -557,10 +576,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="399.99">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="399.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -581,7 +600,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 499.99</span><span>600</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -592,10 +613,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-403" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="499.99">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-403" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="499.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -616,6 +637,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="price-section">
+                    <span>$ 250.99</span><span>300</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -626,10 +650,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-404" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="250.99">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-404" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="250.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -650,6 +674,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="price-section">
+                    <span>$ 299.99</span><span>500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -660,10 +687,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-405" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-405" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -677,13 +704,13 @@
             </div>
           </div>
           <div class="row mb-4">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
               <div class="ban-pro">
                 <h3><a href="">Ion Chromatograph</a></h3>
                 <img src="assets/images/ionchrom.png" alt="">
               </div>
             </div>
-            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
               <div class="hold-carousel">
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
@@ -696,6 +723,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="price-section">
+                    <span>$ 1299.00</span><span>1500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -706,10 +736,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -730,6 +760,9 @@
                       </div>
                     </div>
                   </div>
+                  <div class="price-section">
+                    <span>$ 1399.00</span><span>1500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -740,10 +773,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1399.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1399.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -764,7 +797,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 1499.00</span><span>1500</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -775,10 +810,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1499.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1499.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -799,7 +834,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 1500.00</span><span>1800</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -810,10 +847,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1500.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -834,7 +871,9 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <div class="price-section">
+                    <span>$ 1699.00</span><span>1800</span>
+                  </div>
                   <div class="specs-list">
                     <ul>
                       <li><span>Tube quantity :</span> <span>100</span></li>
@@ -845,10 +884,10 @@
                   </div>
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
-                    <button class="btn cart" data-tip="Add to cart">
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-605" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist">
+                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-605" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
@@ -905,6 +944,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 2000.00</span><span>2500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Tube quantity :</span> <span>100</span></li>
@@ -915,11 +957,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2000.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2000.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -955,6 +997,9 @@
                   <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Element Analyzer <br> CLEA-101</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 2100.00</span><span>2500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Detection Capability :</span> <span>As, Hg, Se, Sb, Te</span></li>
@@ -965,11 +1010,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Element Analyze CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="2100.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Element Analyze CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="2100.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1006,6 +1051,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatograph-Mass Spectrometer CLGMS-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 2200.00</span><span>2500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Detection Capability :</span> <span>As, Hg, Se, Sb, Te</span></li>
@@ -1016,11 +1064,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="2200.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="2200.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1057,6 +1105,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatography <br> CLGC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 2300.00</span><span>2500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Tube quantity :</span> <span>100</span></li>
@@ -1067,11 +1118,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2300.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1108,6 +1159,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 2400.00</span><span>2500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Tube quantity :</span> <span>100</span></li>
@@ -1118,11 +1172,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2400.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2400.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1160,6 +1214,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1200.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1170,11 +1227,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1200.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1200.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1211,6 +1268,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Liquid Chromatograph Mass Spectrometer CLMS-601 </h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1300.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1221,11 +1281,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1300.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1262,6 +1322,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Portable GC-MS <br> CLPCS-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1400.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1272,11 +1335,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1400.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1400.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1313,6 +1376,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Portable Ion Chromatograph CLPIC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1500.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1323,11 +1389,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1364,6 +1430,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1600.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1374,11 +1443,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1600.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1600.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1421,6 +1490,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1000.00</span><span>1500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Tube quantity :</span> <span>100</span></li>
@@ -1431,10 +1503,10 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1000.00">
                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1000.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1470,6 +1542,9 @@
                   <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Element Analyzer <br> CLEA-101</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1100.00</span><span>1500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Detection Capability :</span> <span>As, Hg, Se, Sb, Te</span></li>
@@ -1480,10 +1555,10 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Element Analyzer CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="1100.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Element Analyzer CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="1100.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1520,6 +1595,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatograph-Mass Spectrometer CLGMS-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1200.00</span><span>1500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Detection Capability :</span> <span>As, Hg, Se, Sb, Te</span></li>
@@ -1530,11 +1608,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1200.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1200.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1571,6 +1649,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatography <br> CLGC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1300.00</span><span>1500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Tube quantity :</span> <span>100</span></li>
@@ -1581,11 +1662,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="1300.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="1300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1622,6 +1703,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1400.00</span><span>1500</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1632,11 +1716,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1400.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1400.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1673,6 +1757,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Liquid Chromatograph Mass Spectrometer CLMS-601 </h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1500.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1683,11 +1770,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1722,7 +1809,10 @@
                     </div>
                 </div>
                 <div class="chrom-product-name">
-                  <a href="productdescription.html"><h3>Portable GC-MS <br> CLPCS-601</h3></a>
+                  <a href="productdescription.html"><h3>Portable GC-MS CLPCS-601</h3></a>
+                </div>
+                <div class="price-section">
+                  <span>$ 1600.00</span><span>2000</span>
                 </div>
                 <div class="specs-list">
                   <ul>
@@ -1734,11 +1824,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1600.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1600.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1775,6 +1865,9 @@
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Portable Ion Chromatograph CLPIC-601</h3></a>
                 </div>
+                <div class="price-section">
+                  <span>$ 1700.00</span><span>2000</span>
+                </div>
                 <div class="specs-list">
                   <ul>
                     <li><span>Cell Volume :</span> <span>≤ 0.8 μL</span></li>
@@ -1785,11 +1878,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1700.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1700.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1818,6 +1911,9 @@
                   <img src="assets/images/products/automatic-fraction-collector.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 1700.00</span><span>2000</span>
+                  </div>
                   <ul>
                     <li><span>Tube quantity :</span><span>100</span></li>
                     <li><span>Maximum capacity :</span><span>12ml</span></li>
@@ -1827,11 +1923,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1851,6 +1947,9 @@
                   <img src="assets/images/products/element-analyzer.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 1800.00</span><span>2000</span>
+                  </div>
                   <ul> 
                     <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
                     <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li> 
@@ -1860,11 +1959,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Element Analyzer CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="1800.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Element Analyzer CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="1800.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1884,6 +1983,9 @@
                   <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 1900.00</span><span>2000</span>
+                  </div>
                   <ul> 
                     <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
                     <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li> 
@@ -1893,11 +1995,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1900.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1900.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1917,6 +2019,9 @@
                   <img src="assets/images/products/gas-chromatography.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 2000.00</span><span>2500</span>
+                  </div>
                   <ul> 
                     <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
                     <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li> 
@@ -1926,11 +2031,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1950,6 +2055,9 @@
                   <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 2100.00</span><span>2500</span>
+                  </div>
                   <ul> 
                     <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
                     <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li> 
@@ -1959,11 +2067,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="2100.0">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="2100.0">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -1983,6 +2091,9 @@
                   <img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt="">
                 </div>
                 <div class="content-hor">
+                  <div class="price-section p-0 mt-2 mb-1">
+                    <span>$ 2300.00</span><span>2500</span>
+                  </div>
                   <ul> 
                     <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
                     <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li> 
@@ -1992,11 +2103,11 @@
                 </div>
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
-                  <button class="btn cart" data-tip="Add to cart">
+                  <button class="btn cart" data-tip="Add to cart" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="2300.00">
                     <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist">
+                  <button class="btn view" data-tip="Wishlist" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="2300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
@@ -2090,6 +2201,7 @@
          </div>
        </footer>
     </div>
+    
     <script src="assets/js/atcw.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -2320,10 +2432,14 @@
                   },
                   {
                       breakpoint: 768,
-                      settings: { slidesToShow: 1 }
+                      settings: { slidesToShow: 2 }
                   },
                   {
                       breakpoint: 480,
+                      settings: { slidesToShow: 2 }
+                  },
+                  {
+                      breakpoint: 400,
                       settings: { slidesToShow: 1 }
                   }
               ]
@@ -2366,191 +2482,8 @@
           });
       });
     </script>
-    <script>
-      // === CART STORAGE HELPERS ===
-function loadCart() {
-  return JSON.parse(localStorage.getItem('cart')) || {};
-}
-
-function saveCart(cart) {
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-function getCartItemCount(cart) {
-  return Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
-}
-
-function getCartTotal(cart) {
-  return Object.values(cart).reduce((sum, item) => sum + (item.price * item.qty), 0);
-}
-
-// === OFFCANVAS RENDERING ===
-function renderCartItems() {
-  const cart = loadCart();
-  const container = document.getElementById('cartItemsContainer');
-  const footer = document.querySelector('.cart-footer');
-  
-  if (!container) return;
-
-  // Clear existing items
-  container.innerHTML = '';
-
-  if (Object.keys(cart).length === 0) {
-    container.innerHTML = `
-      <div class="empty-cart">
-        <i class="hgi hgi-stroke hgi-shopping-bag-01" style="font-size: 48px; color: #ccc;"></i>
-        <p>Your cart is empty</p>
-      </div>
-    `;
-    if (footer) footer.style.display = 'none';
-    return;
-  }
-
-  // Render each cart item
-  Object.values(cart).forEach(item => {
-    const itemHtml = `
-      <div class="cart-item" data-product-id="${item.id}">
-        <div class="cart-item-image" style="background-image: url('https://via.placeholder.com/60?text=${item.id}')"></div>
-        <div class="cart-item-details">
-          <h6 class="cart-item-title">${item.title}</h6>
-          <p class="cart-item-price">$${item.price.toFixed(2)} x ${item.qty}</p>
-          <div class="quantity-controls">
-            <button class="quantity-btn qty-minus" data-id="${item.id}">-</button>
-            <input type="number" class="quantity-input" value="${item.qty}" min="1" data-id="${item.id}">
-            <button class="quantity-btn qty-plus" data-id="${item.id}">+</button>
-            <span class="remove-item" data-id="${item.id}">×</span>
-          </div>
-        </div>
-      </div>
-    `;
-    container.insertAdjacentHTML('beforeend', itemHtml);
-  });
-
-  // Show footer with total
-  if (footer) {
-    document.getElementById('cartTotal').textContent = getCartTotal(cart).toFixed(2);
-    footer.style.display = 'block';
-  }
-}
-
-// === CART OPERATIONS ===
-function addToCart(product) {
-  const cart = loadCart();
-  
-  if (cart[product.id]) {
-    cart[product.id].qty += product.qty || 1;
-  } else {
-    cart[product.id] = { ...product, qty: product.qty || 1 };
-  }
-  
-  saveCart(cart);
-  updateHeaderCounters();
-  
-  // Show success tooltip (if you have one)
-  showToast('Added to cart!');
-}
-
-function updateCartQuantity(id, qty) {
-  const cart = loadCart();
-  if (cart[id] && qty > 0) {
-    cart[id].qty = qty;
-    saveCart(cart);
-    renderCartItems();
-    updateHeaderCounters();
-  } else if (qty <= 0) {
-    removeFromCart(id);
-  }
-}
-
-function removeFromCart(id) {
-  const cart = loadCart();
-  delete cart[id];
-  saveCart(cart);
-  renderCartItems();
-  updateHeaderCounters();
-}
-
-// === EVENT DELEGATION (works for dynamic offcanvas items) ===
-document.addEventListener('click', (e) => {
-  // Add to cart button
-  if (e.target.closest('.btn-add-cart')) {
-    const card = e.target.closest('.product-card');
-    const product = {
-      id: card.dataset.id,
-      title: card.dataset.title,
-      price: Number(card.dataset.price) || 0,
-      qty: 1
-    };
-    addToCart(product);
-    return;
-  }
-
-  // Offcanvas quantity controls
-  if (e.target.matches('.qty-plus, .qty-minus')) {
-    const id = e.target.dataset.id;
-    const input = document.querySelector(`.quantity-input[data-id="${id}"]`);
-    const currentQty = parseInt(input.value) || 1;
-    const newQty = e.target.classList.contains('qty-plus') ? currentQty + 1 : currentQty - 1;
-    updateCartQuantity(id, newQty);
-  }
-
-  // Remove item
-  if (e.target.matches('.remove-item')) {
-    const id = e.target.dataset.id;
-    if (confirm('Remove this item?')) {
-      removeFromCart(id);
-    }
-  }
-
-  // Toggle offcanvas (if using Bootstrap)
-  if (e.target.matches('[data-bs-toggle="offcanvas"]')) {
-    setTimeout(renderCartItems, 100); // Render after animation
-  }
-});
-
-document.addEventListener('input', (e) => {
-  if (e.target.matches('.quantity-input')) {
-    const id = e.target.dataset.id;
-    const qty = parseInt(e.target.value) || 1;
-    updateCartQuantity(id, qty);
-  }
-});
-
-// === INIT ===
-document.addEventListener('DOMContentLoaded', () => {
-  updateHeaderCounters();
-  renderCartItems();
-});
-
-function updateHeaderCounters() {
-  const cart = loadCart();
-  const cartCountEl = document.querySelector('#cartCount, .cart-count');
-  const wishCountEl = document.querySelector('#wishlistCount, .wishlist-count');
-  
-  if (cartCountEl) cartCountEl.textContent = getCartItemCount(cart);
-  if (wishCountEl) wishCountEl.textContent = loadWishlist().length;
-}
-
-function showToast(message) {
-  // Simple toast notification
-  const toast = document.createElement('div');
-  toast.style.cssText = `
-    position: fixed; top: 20px; right: 20px; 
-    background: #10b981; color: white; padding: 12px 20px;
-    border-radius: 8px; z-index: 9999; transform: translateX(400px);
-    transition: transform 0.3s ease;
-  `;
-  toast.textContent = message;
-  document.body.appendChild(toast);
-  
-  setTimeout(() => toast.style.transform = 'translateX(0)', 100);
-  setTimeout(() => {
-    toast.style.transform = 'translateX(400px)';
-    setTimeout(() => toast.remove(), 300);
-  }, 2000);
-}
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+  
 </html>
 
