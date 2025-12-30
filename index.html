@@ -131,7 +131,9 @@
                               </div>
                           </div>
                           <a href="#" class="account-section" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
+                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-cart-02 navcart"></i>
+                              <!-- <i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i> -->
+                            </div>
                             <div class="count-cart" id="cartCount">0</div>
                          </a>
                          <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasCart" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="offcanvasCartLabel">
@@ -148,7 +150,7 @@
                                   </div>
                                   <div class="cart-footer" style="display: none;">
                                       <div class="cart-total">
-                                          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                             <strong>Total: $<span id="cartTotal">0.00</span></strong>
                                       </div>
                                       <div class="cart-actions">
                                           <a href="cart.html" class="btn btn-outline-primary">View Cart</a>
@@ -384,8 +386,60 @@
       </header>
       <section class="chromlab-banner">
         <img src="assets/images/chrom2.png" alt="">
+      </section> 
+      <section class="upcate">
+        <div class="container-fluid">
+           <h1 class="section-title">Chromlab Category</h1>
+          <div class="row upcate-row">
+            <div class="col-xl-4 mb-3">
+              <div class="upcatename">
+                <ul id="categoryList">
+                  <li class="active" data-key="afc"><a href="javascript:void(0)">Automatic Fraction Collector</a></li>
+                  <li data-key="ea"><a href="javascript:void(0)">Element Analyzer</a></li>
+                  <li data-key="gcms"><a href="javascript:void(0)">Gas Chromatography Mass Spectrometry</a></li>
+                  <li data-key="gc"><a href="javascript:void(0)">Gas Chromatography</a></li>
+                  <li data-key="ic"><a href="javascript:void(0)">Ion Chromatograph</a></li>
+                  <li data-key="lcms"><a href="javascript:void(0)">Liquid Chromatograph Mass Spectrometer</a></li>
+                  <li data-key="lc"><a href="javascript:void(0)">Liquid Chromatography</a></li>
+                  <li data-key="pgc"><a href="javascript:void(0)">Portable GC-MS</a></li>
+                  <li data-key="pic"><a href="javascript:void(0)">Portable Ion Chromatograph</a></li>
+                  <li data-key="tlcs"><a href="javascript:void(0)">TLC Scanner</a></li>
+                  <li data-key="tq"><a href="javascript:void(0)">Triple Quadrupole</a></li>
+                  <!-- <li data-key="stpm"><a href="javascript:void(0)">Spectrophotometer</a></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 mb-3">
+              <div class="showcsection">
+                <div class="showcs active" id="categoryDisplay">
+                  <div class="upcateimage">
+                    <img id="cateImage" src="" alt="">
+                  </div>
+                  <div class="upname">
+                    <h2 id="cateName" class="up_name-title"></h2>
+                  </div>
+                  <div class="updescription">
+                    <p id="cateDesc" class="updesk"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 mb-3">
+              <div class="showpnlist">
+                <ul id="productList" class="p-list">
+                  <li class="active show">
+                    <div class="proimgup">
+                      <img src="" alt="">
+                    </div>
+                    <a href="productdescription.html"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="sbc-top">
+      <!-- <section class="sbc-top">
             <div class="container-fluid">
                  <h1 class="section-title">Chromlab Category</h1>
                 <div class="slick-carousel">
@@ -394,7 +448,7 @@
                           <img src="assets/images/products/automatic-fraction-collector.jpg" alt="Triple Quadrupole GC-MS">
                           <div class="card-content">
                             <h4>Automatic Fraction Collector</h4>
-                            <!-- <p>4</p> -->
+                            <p>4</p>
                           </div>
                         </div>
                     </a>
@@ -403,7 +457,7 @@
                           <img src="assets/images/products/element-analyzer.jpg" alt="TLC Scanner">
                           <div class="card-content">
                             <h4>Element Analyzer</h4>
-                            <!-- <p>3</p> -->
+                            <p>3</p>
                           </div>
                         </div>
                     </a>
@@ -411,8 +465,8 @@
                        <div class="slider-card card" wish-id="3" data-id="3" data-name="Circulating Water Bath Series WP-100(110V/60Hz)" data-price="150.00" data-image="assets/images/dummy/WP-100-Circulating-Water-Bath-Copy-300x300-1.jpg">
                         <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="Centrifuges">
                         <div class="card-content">
-                          <h4>Gas Chromatography Mmass Spectrometry</h4>
-                          <!-- <p>9</p> -->
+                          <h4>Gas Chromatography Mass Spectrometry</h4>
+                          <p>9</p>
                         </div>
                        </div>
                     </a>
@@ -421,7 +475,7 @@
                         <img src="assets/images/products/gas-chromatography.jpg" alt="Gas Chromatography">
                         <div class="card-content">
                           <h4>Gas Chromatography</h4>
-                          <!-- <p>6</p> -->
+                          <p>6</p>
                         </div>
                       </div>
                     </a>
@@ -430,7 +484,7 @@
                          <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="Ion Chromatograph">
                       <div class="card-content">
                         <h4>Ion Chromatograph</h4>
-                        <!-- <p>1</p> -->
+                        <p>1</p>
                       </div>
                       </div>
                     </a>
@@ -439,7 +493,7 @@
                         <img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt="Liquid Chromatograph Mass Spectrometer">
                         <div class="card-content">
                           <h4>Liquid Chromatograph Mass Spectrometer</h4>
-                          <!-- <p>9</p> -->
+                          <p>9</p>
                         </div>
                       </div>
                     </a>
@@ -448,7 +502,7 @@
                           <img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt="Liquid Chromatography">
                         <div class="card-content">
                           <h4>Liquid Chromatography</h4>
-                          <!-- <p>8</p> -->
+                          <p>8</p>
                         </div>
                        </div>
                     </a>
@@ -457,7 +511,7 @@
                           <img src="assets/images/products/portable-gc-ms.jpg" alt="Portable GC-MS">
                         <div class="card-content">
                           <h4>Portable GC-MS</h4>
-                          <!-- <p>2</p> -->
+                          <p>2</p>
                         </div>
                        </div>
                         
@@ -467,7 +521,7 @@
                          <img src="assets/images/products/portable-ion-chromatograph.jpg" alt="Laboratory Refrigerator">
                         <div class="card-content">
                           <h4>Portable Ion Chromatograph</h4>
-                          <!-- <p>1</p> -->
+                          <p>1</p>
                         </div>
                        </div>
                     </a>
@@ -476,7 +530,7 @@
                         <img src="assets/images/products/tlc-scanner-1740127345.jpg" alt="Microscopes">
                         <div class="card-content">
                           <h4>TLC Scanner </h4>
-                          <!-- <p>10</p> -->
+                          <p>10</p>
                         </div>
                        </div>
                     </a>
@@ -485,7 +539,7 @@
                        <img src="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" alt="Dissection">
                         <div class="card-content">
                           <h4>Triple Quadrupole </h4>
-                          <!-- <p>12</p> -->
+                          <p>12</p>
                         </div>
                        </div>
                     </a>
@@ -494,28 +548,43 @@
                         <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="Spectrophotometer">
                         <div class="card-content">
                           <h4>Spectrophotometer</h4>
-                          <!-- <p>9</p> -->
+                          <p>9</p>
                         </div>
                        </div>
                     </a>
                 </div>
             </div>
-      </section>
+      </section> -->
       <section class="hold-ban">
         <div class="container-fluid">
-          <h1 class="section-title">Top Selling</h1>
+          <h1 class="section-title">Automatic Fraction Collector</h1>
           <div class="row mb-4">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+            <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
               <div class="ban-pro">
                 <h3><a href="">Fraction Collector</a></h3>
                 <img src="assets/images/automatic-fraction-collector.png" alt="">
               </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+            </div> -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="hold-carousel">
                 <div class="chrom-cards">
+
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-401"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -536,11 +605,11 @@
                     </ul>
                   </div>
                   <div class="buttons-section">
-                    <a href="productdescription.html">Explore</a>
+                    <a href="productdescription.html" data-tip="View Product">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" 
+                    <!-- <button class="btn view" data-tip="Wishlist" 
                       data-product-name="Automatic Fraction Collector CLFC-401"
                       data-product-img="assets/images/products/automatic-fraction-collector.jpg"
                       data-product-price="299.99">
@@ -548,13 +617,27 @@
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-402</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-402"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -577,21 +660,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="399.99">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="399.99">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="399.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-403</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-403"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -614,21 +711,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-403" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="499.99">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-403" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="499.99">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-403" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="499.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-404</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-404"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -651,21 +762,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-404" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="250.99">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-404" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="250.99">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-404" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="250.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-405</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-405"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -688,33 +813,99 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-405" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-405" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-405" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
+                    </button> -->
+                      <div class="card-tooltip" id="cardTip1"></div>
+                  </div>
+                </div>
+                <div class="chrom-cards">
+                  <div class="chrom-product-name">
+                    <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-406</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-406"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
                     </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                  </div>
+                  <div class="chrom-img-section">
+                    <div class="chrom-slider" >
+                      <div class="chrom-slides">
+                        <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-section">
+                    <span>$ 299.99</span><span>500</span>
+                  </div>
+                  <div class="specs-list">
+                    <ul>
+                      <li><span>Tube quantity :</span> <span>100</span></li>
+                      <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                      <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                      <li><span>Display :</span> <span>LED</span></li>
+                    </ul>
+                  </div>
+                  <div class="buttons-section">
+                    <a href="productdescription.html">Explore</a>
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-406" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                    </button>
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-406" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+        
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-download-02"></i>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <h1 class="section-title">Ion Chromatograph</h1>
           <div class="row mb-4">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+            <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
               <div class="ban-pro">
                 <h3><a href="">Ion Chromatograph</a></h3>
                 <img src="assets/images/ionchrom.png" alt="">
               </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+            </div> -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <div class="hold-carousel">
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Ion Chromatograph CLIC-601</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-601"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -737,21 +928,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Ion Chromatograph CLIC-602</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-602"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -774,21 +979,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1399.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1399.00">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1399.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Ion Chromatograph CLIC-603</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-603"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -811,21 +1030,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1499.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1499.00">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1499.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
                 <div class="chrom-cards">
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-604"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -848,21 +1081,35 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1500.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1500.00">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1500.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
-                    </button>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
-                <div class="chrom-cards">
+                <div class="chrom-cards">    
                   <div class="chrom-product-name">
                     <a href="productdescription.html"><h3>Ion Chromatograph CLIC-605</h3></a>
+                  </div>
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-605"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                   </div>
                   <div class="chrom-img-section">
                     <div class="chrom-slider" >
@@ -885,15 +1132,66 @@
                   <div class="buttons-section">
                     <a href="productdescription.html">Explore</a>
                     <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-605" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                     </button>
-                    <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-605" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-605" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
                       <i class="hgi hgi-stroke hgi-favourite"></i>
         
                     </button>
                     <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                       <i class="hgi hgi-stroke hgi-download-02"></i>
+                    </button> -->
+                      <div class="card-tooltip" id="cardTip1"></div>
+                  </div>
+                </div>
+                <div class="chrom-cards">
+                  <div class="chrom-product-name">
+                    <a href="productdescription.html"><h3>Ion Chromatograph CLIC-606</h3></a>
+                  </div>   
+                  <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-606"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="299.99">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
                     </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                  </div>
+                  <div class="chrom-img-section">
+                    <div class="chrom-slider" >
+                      <div class="chrom-slides">
+                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price-section">
+                    <span>$ 1699.00</span><span>1800</span>
+                  </div>
+                  <div class="specs-list">
+                    <ul>
+                      <li><span>Tube quantity :</span> <span>100</span></li>
+                      <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                      <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                      <li><span>Display :</span> <span>LED</span></li>
+                    </ul>
+                  </div>
+                  <div class="buttons-section">
+                    <a href="productdescription.html">Explore</a>
+                    <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-606" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                    </button>
+                    <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-606" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1699.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+        
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-download-02"></i>
+                    </button> -->
                       <div class="card-tooltip" id="cardTip1"></div>
                   </div>
                 </div>
@@ -941,6 +1239,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-401"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="2000.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                 </div>
@@ -958,16 +1270,16 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2000.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                   <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2000.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2000.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -989,10 +1301,24 @@
                     </div> -->
                   </div>
                   <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
+                    <button class="chrom-dot active" data-index="0"></button>
+                    <button class="chrom-dot" data-index="1"></button>
+                    <button class="chrom-dot" data-index="2"></button>
+                  </div>
+                </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Element Analyzer CLEA-101"
+                      data-product-img="assets/images/products/element-analyzer.jpg"
+                      data-product-price="2100.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
                 </div>
                   <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Element Analyzer <br> CLEA-101</h3></a>
@@ -1011,17 +1337,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Element Analyze CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="2100.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Element Analyze CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="2100.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Element Analyze CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="2100.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1048,6 +1374,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601"
+                      data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg"
+                      data-product-price="2200.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatograph-Mass Spectrometer CLGMS-601</h3></a>
                 </div>
@@ -1065,17 +1405,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="2200.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="2200.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="2200.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1102,6 +1442,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Gas Chromatography CLGC-601"
+                      data-product-img="assets/images/products/gas-chromatography.jpg"
+                      data-product-price="2300.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Gas Chromatography <br> CLGC-601</h3></a>
                 </div>
@@ -1119,17 +1473,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2300.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2300.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1156,6 +1510,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Automatic Fraction Collector CLFC-401"
+                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                      data-product-price="2400.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
                 </div>
@@ -1173,16 +1541,16 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2400.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2400.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="2400.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1211,6 +1579,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-601"
+                      data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                      data-product-price="1200.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
                 </div>
@@ -1228,17 +1610,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1200.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1200.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1200.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1265,6 +1647,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601"
+                      data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg"
+                      data-product-price="1300.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Liquid Chromatograph Mass Spectrometer CLMS-601 </h3></a>
                 </div>
@@ -1282,17 +1678,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1300.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1300.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Liquid Chromatograph Mass Spectrometer CLMS-601" data-product-img="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" data-product-price="1300.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1319,6 +1715,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Portable GC-MS CLPCS-601"
+                      data-product-img="assets/images/products/portable-gc-ms.jpg"
+                      data-product-price="1400.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Portable GC-MS <br> CLPCS-601</h3></a>
                 </div>
@@ -1336,17 +1746,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1400.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1400.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Portable GC-MS CLPCS-601" data-product-img="assets/images/products/portable-gc-ms.jpg" data-product-price="1400.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1373,6 +1783,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Portable Ion Chromatograph CLPIC-601"
+                      data-product-img="assets/images/products/portable-ion-chromatograph.jpg"
+                      data-product-price="1500.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Portable Ion Chromatograph CLPIC-601</h3></a>
                 </div>
@@ -1390,17 +1814,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1500.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1500.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Portable Ion Chromatograph CLPIC-601" data-product-img="assets/images/products/portable-ion-chromatograph.jpg" data-product-price="1500.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -1427,6 +1851,20 @@
                       <button class="chrom-dot" data-index="2"></button>
                     </div>
                 </div>
+                <div class="vert-btn">
+                    <button class="btn view" data-tip="Wishlist" 
+                      data-product-name="Ion Chromatograph CLIC-601"
+                      data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                      data-product-price="1600.00">
+                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn catalog" data-tip="Quick View">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                    </button>
+                </div>
                 <div class="chrom-product-name">
                   <a href="productdescription.html"><h3>Ion Chromatograph <br> CLIC-601</h3></a>
                 </div>
@@ -1444,17 +1882,17 @@
                 <div class="buttons-section">
                   <a href="productdescription.html">Explore</a>
                   <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1600.00">
-                    <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
+                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
                   
                   </button>
-                  <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1600.00">
+                  <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1600.00">
                     <i class="hgi hgi-stroke hgi-favourite"></i>
       
                   </button>
                   <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
                     <i class="hgi hgi-stroke hgi-download-02"></i>
               
-                  </button>
+                  </button> -->
                     <div class="card-tooltip" id="cardTip1"></div>
                 </div>
               </div>
@@ -2120,7 +2558,7 @@
             </div>
           </div>
         </div>
-       </section>
+       </section> 
        <footer>
          <div class="middle-footer">
             <div div class="container-fluid">
@@ -2409,7 +2847,7 @@
     <script>
       $(document).ready(function() {
           $('.hold-carousel').slick({
-              slidesToShow: 4,
+              slidesToShow: 5,
               slidesToScroll: 1,
               infinite: true,
               arrows: true, // Enable navigation arrows

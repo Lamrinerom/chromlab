@@ -382,3 +382,259 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+
+
+
+
+// -----------------------------newupcate
+
+// Data for categories and their products
+const categoryData = {
+  afc: {
+    name: 'Automatic Fraction Collector',
+    img: 'assets/images/products/automatic-fraction-collector.jpg',
+    desc: 'Automatic Fraction Collector efficiently collects fractions from chromatographic separations with precise timing and volume control. It minimizes sample loss, improves reproducibility, and supports unattended operation, making it ideal for analytical, preparative, and research laboratories handling complex, high-throughput workflows in pharmaceuticals, biotechnology, environmental testing, and chemical analysis.',
+    products: [
+      {
+        name: 'Automatic Fraction Collector CLFC-401',
+        img: 'assets/images/products/automatic-fraction-collector.jpg',
+        url: 'productdescription.html'
+      }
+    ]
+  },
+  ea: {
+    name: 'Element Analyzer',
+    img: 'assets/images/products/element-analyzer.jpg',
+    desc: 'Element Analyzer precisely measures the elemental composition of solid, liquid, or gaseous samples. It delivers accurate, repeatable results for research, quality control, and regulatory testing across pharmaceuticals, environmental labs, and industry. Its advanced detection technology ensures reliable performance, simplified workflows, and fast analysis for complex materials.',
+    products: [
+      {
+        name: 'Element Analyzer CLEA-101',
+        img: 'assets/images/products/element-analyzer.jpg',
+        url: 'product-elan-201.html'
+      }
+    ]
+  },
+  gcms: {
+    name: 'Gas Chromatography Mass Spectrometry',
+    img: 'assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg',
+    desc: 'Gas Chromatography Mass Spectrometry (GC‑MS) is an analytical technique that separates complex mixtures and identifies individual compounds with high sensitivity and specificity. It is widely used in pharmaceuticals, environmental analysis, forensics, food safety, and research for precise qualitative and quantitative chemical analysis.',
+    products: [
+      {
+        name: 'Gas Chromatograph-Mass Spectrometer CLGMS-601',
+        img: 'assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Gas Chromatograph-Mass Spectrometer CLGMS-602',
+        img: 'assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  gc: {
+    name: 'Gas Chromatography',
+    img: 'assets/images/products/gas-chromatography.jpg',
+    desc: 'Gas Chromatography (GC) is an essential analytical technique for separating and analyzing volatile compounds in complex mixtures. It excels in environmental monitoring, food safety, pharmaceuticals, and forensics. GC systems deliver high-resolution separation with precise detection, enabling accurate identification and quantification of trace-level analytes efficiently.',
+    products: [
+      {
+        name: 'Gas Chromatography CLGC-601',
+        img: 'assets/images/products/gas-chromatography.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Gas Chromatography CLGC-602',
+        img: 'assets/images/products/gas-chromatography.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  ic: {
+    name: 'Ion Chromatograph',
+    img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+    desc: 'Ion Chromatograph delivers precise separation and detection of ions in complex samples. Ideal for water quality analysis, environmental monitoring, and pharmaceutical testing, it features high sensitivity, automated sample injection, and robust columns for anions/cations. Ensure compliance with regulatory standards effortlessly.',
+    products: [
+      {
+        name: 'Ion Chromatograph CLIC-601',
+        img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Ion Chromatograph CLIC-602',
+        img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Ion Chromatograph CLIC-603',
+        img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Ion Chromatograph CLIC-604',
+        img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Ion Chromatograph CLIC-605',
+        img: 'assets/images/products/ion-chromatograph-1737962696.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  lcms: {
+    name: 'Liquid Chromatograph Mass Spectrometer',
+    img: 'assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg',
+    desc: 'Liquid Chromatograph Mass Spectrometer (LC-MS) delivers unparalleled precision in analytical chemistry, separating complex mixtures via liquid chromatography and identifying compounds through high-resolution mass spectrometry. Ideal for pharmaceutical research, environmental monitoring, and food safety testing, it provides accurate molecular weight determination and structural elucidation for trace-level detection.',
+    products: [
+      {
+        name: 'Liquid Chromatograph Mass Spectrometer CLMS-601',
+        img: 'assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Liquid Chromatograph Mass Spectrometer CLMS-602',
+        img: 'assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  lc: {
+    name: 'Liquid Chromatography',
+    img: 'assets/images/products/liquid-chromatography-1738666603.jpg',
+    desc: 'Liquid Chromatography is a powerful analytical technique separating complex mixtures based on molecular interactions with a stationary phase. Ideal for pharmaceutical analysis, protein purification, and environmental monitoring, it delivers high-resolution results with exceptional sensitivity and precision for modern laboratory workflows.',
+    products: [
+      {
+        name: 'Liquid Chromatography CLLC-601',
+        img: 'assets/images/products/liquid-chromatography-1738666603.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Liquid Chromatography CLLC-602',
+        img: 'assets/images/products/liquid-chromatography-1738666603.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Liquid Chromatography CLLC-603',
+        img: 'assets/images/products/liquid-chromatography-1738666603.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  pgc: {
+    name: 'Portable GC-MS',
+    img: 'assets/images/products/portable-gc-ms.jpg',
+    desc: 'Portable GC-MS delivers lab-grade performance in a compact, rugged design. Advanced gas chromatography separation with high-sensitivity mass spectrometry enables precise volatile compound analysis. Ideal for field environmental monitoring, food safety testing, and forensic investigations. Battery-powered operation ensures mobility without compromising accuracy or detection limits.',
+    products: [
+      {
+        name: 'Portable GC-MS CLPCS-601',
+        img: 'assets/images/products/portable-gc-ms.jpg',
+        url: 'product-gcms-501.html'
+      },
+      {
+        name: 'Portable GC-MS CLPCS-602',
+        img: 'assets/images/products/portable-gc-ms.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  pic: {
+    name: 'Portable Ion Chromatograph',
+    img: 'assets/images/products/portable-ion-chromatograph.jpg',
+    desc: 'Portable Ion Chromatograph offers field-ready anion/cation analysis with compact design and high sensitivity. Features battery operation, touch-screen interface, and automated calibration for rapid water quality testing. Ideal for environmental monitoring, ideal for on-site ion detection in groundwater, wastewater, and process streams with lab-grade accuracy.',
+    products: [
+      {
+        name: 'Portable Ion Chromatograph CLPIC-601',
+        img: 'assets/images/products/portable-ion-chromatograph.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  tlcs: {
+    name: 'TLC Scanner',
+    img: 'assets/images/products/tlc-scanner-1740127345.jpg',
+    desc: 'TLC Scanner revolutionizes thin-layer chromatography analysis with high-resolution imaging and precise Rf value calculations. Compact design scans plates instantly, detecting compounds via UV/visible light. Ideal for pharmaceutical QC, forensics, and research labs—quantify spots, generate reports, and ensure reproducible results effortlessly. Advanced software integration elevates workflow efficiency.',
+    products: [
+      {
+        name: 'TLC Scanner CLTS-601',
+        img: 'assets/images/products/tlc-scanner-1740127345.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  },
+  tq: {
+    name: 'Triple Quadrupole ',
+    img: 'assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg',
+    desc: 'Triple Quadrupole GC-MS systems deliver ultra-sensitive detection for trace-level analysis in complex matrices. Featuring three quadrupole analyzers for superior selectivity, multiple reaction monitoring (MRM), and high-resolution mass accuracy, they excel in pesticide screening, pharmaceutical impurities, and environmental contaminants with unmatched speed and precision.',
+    products: [
+      {
+        name: 'Triple Quadrupole GCMS CLTQC-601',
+        img: 'assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg',
+        url: 'product-gcms-501.html'
+      }
+    ]
+  }
+  // add more keys matching data-key attributes
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryList = document.getElementById('categoryList');
+  const cateImage   = document.getElementById('cateImage');
+  const cateName    = document.getElementById('cateName');
+  const cateDesc    = document.getElementById('cateDesc');
+  const categoryBox = document.getElementById('categoryDisplay');
+  const productList = document.getElementById('productList');
+
+  function renderCategory(key) {
+    const data = categoryData[key];
+    if (!data) return;
+
+    // fade out middle box then update then fade in
+    categoryBox.classList.remove('active');
+    setTimeout(() => {
+      cateImage.src = data.img;
+      cateImage.alt = data.name;
+      cateName.textContent = data.name;
+      cateDesc.textContent = data.desc;
+      categoryBox.classList.add('active');
+    }, 150);
+
+    // render products on right column
+    productList.innerHTML = data.products
+      .map(p => `
+        <li class="show">
+          <div class="proimgup">
+            <img src="${p.img}" alt="${p.name}">
+          </div>
+          <a href="${p.url}">${p.name}</a>
+        </li>
+      `)
+      .join('');
+  }
+
+  // click + hover behaviour on left column
+  categoryList.querySelectorAll('li').forEach(li => {
+    const key = li.getAttribute('data-key');
+
+    function activateCategory() {
+      // update active state on left
+      categoryList.querySelectorAll('li').forEach(item =>
+        item.classList.remove('active')
+      );
+      li.classList.add('active');
+
+      // update content
+      renderCategory(key);
+    }
+
+    li.addEventListener('mouseenter', activateCategory);
+    li.addEventListener('click', function (e) {
+      e.preventDefault();
+      activateCategory();
+    });
+  });
+
+  // initial load: first active li
+  const firstActive = categoryList.querySelector('li.active');
+  if (firstActive) {
+    renderCategory(firstActive.getAttribute('data-key'));
+  }
+});
