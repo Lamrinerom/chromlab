@@ -580,7 +580,7 @@
         // Render product list dynamically
         function renderProductList() {
         productListEl.innerHTML = '';
-        products.forEach(prod => {
+        products.forEach(prod => {clas
             const item = document.createElement('div');
             item.classList.add('product-item');
             item.innerHTML = `
@@ -608,7 +608,7 @@
 
         subtotalEl.textContent = formatCurrency(subtotal);
         taxEl.textContent = formatCurrency(tax);
-        totalEl.textContent = formatCurrency(total);
+        totalEl.textContent = formatCurrency(total);styl
         }
 
         shippingSelect.addEventListener('change', calculateTotals);

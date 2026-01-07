@@ -3,13 +3,15 @@ let cartOffcanvasInstance = null;
 // Initialize cart functionality
 document.addEventListener('DOMContentLoaded', function() {
   // Add to cart button event listeners
-  document.querySelectorAll('.btn.cart').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            addToCart(this);
-        });
+  const allCartButtons = document.querySelectorAll('.btn.cart, .qvcart-btn');
+  
+  allCartButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      addToCart(this);
     });
+  });
     // Fix: Event delegation for dynamic cart buttons (no more onclick issues)
     document.getElementById('cartItemsContainer')?.addEventListener('click', function(e) {
         if (e.target.closest('.cart-qty-btn')) {
@@ -60,8 +62,6 @@ function addToCart(button) {
   }
 
   updateCartDisplay();
-
-  // Show offcanvas automatically
   showCartOffcanvas();
 
   // Visual feedback
@@ -188,7 +188,7 @@ let wishlistDropdownOpen = false;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Wishlist card button event listeners
-    document.querySelectorAll('.btn.view').forEach(button => {
+    document.querySelectorAll('.btn.view, .qvwish').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation(); // keep dropdown from closing
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (exists) {
             button.style.color = '#dc3545';
             button.setAttribute('data-tip', 'Added');
-            button.setAttribute('title', 'Added');
+            button.setAttribute('title', 'Added in Wishlist');
         }
     });
 
@@ -252,7 +252,7 @@ function addToWishlist(button, options = {}) {
         wishlist = wishlist.filter(item => item.name !== productName);
         button.style.color = '#4ba024';          // Reset icon color
         button.setAttribute('data-tip', 'Wishlist');
-        button.setAttribute('title', 'Wishlist');
+        button.setAttribute('title', 'Add to Wishlist');
     } else {
         // Add to wishlist
         wishlist.push({
@@ -373,14 +373,44 @@ function removeFromWishlist(itemId) {
 // -----------------------------------------------------------------------------
 
 
-// Add scroll effect to header
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.main-header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+document.addEventListener('DOMContentLoaded', function() {
+  const topHeader = document.getElementById('topHeader');
+  const mainContent = document.querySelector('.main-content');
+  let headerHeight = 0;
+  let ticking = false;
+
+  // Measure header height once
+  function measureHeader() {
+    headerHeight = topHeader.offsetHeight;
+    if (mainContent) {
+      mainContent.style.paddingTop = headerHeight + 'px';
     }
+  }
+
+  // Toggle sticky state
+  function updateSticky() {
+    const scrollTop = window.scrollY;
+    
+    if (scrollTop > 10) {
+      topHeader.classList.add('sticky');
+    } else {
+      topHeader.classList.remove('sticky');
+    }
+    
+    ticking = false;
+  }
+
+  // Efficient scroll listener
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateSticky);
+      ticking = true;
+    }
+  });
+
+  // Initial measure
+  measureHeader();
+  window.addEventListener('resize', measureHeader);
 });
 
 
@@ -637,4 +667,282 @@ document.addEventListener('DOMContentLoaded', function () {
   if (firstActive) {
     renderCategory(firstActive.getAttribute('data-key'));
   }
+});
+// ---------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tabContent = document.getElementById('custometabcontent');
+  
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  
+  tabContent.addEventListener('mousedown', (e) => {
+    isDown = true;
+    tabContent.style.cursor = 'grabbing';
+    startX = e.pageX - tabContent.offsetLeft;
+    scrollLeft = tabContent.scrollLeft;
+  });
+  
+  tabContent.addEventListener('mouseleave', () => {
+    isDown = false;
+    tabContent.style.cursor = 'grab';
+  });
+  
+  tabContent.addEventListener('mouseup', () => {
+    isDown = false;
+    tabContent.style.cursor = 'grab';
+  });
+  
+  tabContent.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - tabContent.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed
+    tabContent.scrollLeft = scrollLeft - walk;
+  });
+  
+  // Touch support for mobile
+  let startTouchX = 0;
+  tabContent.addEventListener('touchstart', (e) => {
+    startTouchX = e.touches[0].pageX - tabContent.offsetLeft;
+    scrollLeft = tabContent.scrollLeft;
+  });
+  
+  tabContent.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX - tabContent.offsetLeft;
+    const walk = (x - startTouchX) * 2;
+    tabContent.scrollLeft = scrollLeft - walk;
+  });
+});
+// ------------------------------------------------compare-----------
+
+ document.addEventListener('DOMContentLoaded', function () {
+  const compareList = document.getElementById('compareList');
+  const emptyState = document.getElementById('emptyState');
+  const compareActions = document.getElementById('compareActions');
+  const countBadge = document.getElementById('countBadge');
+  const offcanvasEl = document.getElementById('offcanvasBottom');
+  const cancelBtn = offcanvasEl?.querySelector('.btn-close'); // X button
+
+  const MAX_COMPARE = 4;
+  let products = JSON.parse(localStorage.getItem('compareProducts') || '[]');
+
+  let offcanvasInstance = null;
+
+  renderProducts();
+
+  // Toggle add/remove
+  document.body.addEventListener('click', function (e) {
+    const btn = e.target.closest('.card_compare');
+    if (!btn) return;
+
+    const id = btn.dataset.productId?.trim();
+    const name = btn.dataset.productName?.trim();
+    const img = btn.dataset.productImg?.trim();
+
+    if (!id || !name || !img) return;
+
+    const existingIndex = products.findIndex(p => p.id === id);
+    
+    if (existingIndex > -1) {
+      products.splice(existingIndex, 1);
+      btn.classList.remove('added');
+    } else {
+      if (products.length >= MAX_COMPARE) {
+        showLimitToast();
+        return;
+      }
+      products.push({ id, name, img });
+      btn.classList.add('added');
+    }
+
+    saveProducts();
+    renderProducts();
+    openOffcanvas();
+  });
+
+  // **X BUTTON + OUTSIDE CLICK HANDLER**
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeOffcanvas();
+    });
+  }
+
+  // Global backdrop click (outside offcanvas)
+  document.addEventListener('click', function (e) {
+    if (!offcanvasEl.contains(e.target) && offcanvasInstance?._isShown()) {
+      const count = products.length;
+      if (count === 0) { // Only close when empty
+        closeOffcanvas();
+      }
+    }
+  });
+
+  // Remove from offcanvas
+  compareList.addEventListener('click', function (e) {
+    const removeBtn = e.target.closest('.remove-compare');
+    if (!removeBtn) return;
+
+    const id = removeBtn.dataset.id;
+    products = products.filter(p => p.id !== id);
+    
+    const cardBtn = document.querySelector(`.card_compare[data-product-id="${id}"]`);
+    if (cardBtn) cardBtn.classList.remove('added');
+    
+    saveProducts();
+    renderProducts();
+  });
+
+  function renderProducts() {
+    compareList.innerHTML = '';
+    products.forEach(product => {
+      if (!product.id || !product.name || !product.img) return;
+      
+      const item = document.createElement('div');
+      item.className = 'compare-item d-flex align-items-center gap-2 p-2 border rounded bg-light flex-shrink-0';
+      item.innerHTML = `
+        <img src="${product.img}" alt="${product.name}" class="rounded shadow-sm" style="width:80px;height:80px;object-fit:cover;">
+        <span class="com-pname fw-semibold flex-grow-1 text-truncate" style="max-width:160px;">${product.name}</span>
+        <button type="button" class="btn btn-link btn-sm text-danger p-0 remove-compare fw-bold" data-id="${product.id}">×</button>
+      `;
+      compareList.appendChild(item);
+    });
+    updateDisplay();
+  } 
+
+  function updateDisplay() {
+    const count = products.length;
+    countBadge.textContent = count;
+    if (count === 0) {
+      emptyState.classList.remove('d-none');
+      compareList.classList.add('d-none');
+      compareActions.classList.add('d-none');
+    } else {
+      emptyState.classList.add('d-none');
+      compareList.classList.remove('d-none');
+      compareActions.classList.remove('d-none');
+    }
+  }
+
+  function saveProducts() {
+    localStorage.setItem('compareProducts', JSON.stringify(products));
+  }
+
+  function openOffcanvas() {
+    if (!offcanvasInstance) {
+      offcanvasInstance = new bootstrap.Offcanvas(offcanvasEl);
+    }
+    offcanvasInstance.show();
+  }
+
+  function closeOffcanvas() {
+    if (offcanvasInstance && offcanvasInstance._isShown()) {
+      offcanvasInstance.hide();
+    }
+  }
+
+  // **BOOTSTRAP EVENT LISTENERS** (Reliable close)
+  offcanvasEl.addEventListener('hidden.bs.offcanvas', function () {
+    // Cleanup
+    offcanvasInstance = null;
+  });
+
+  function showLimitToast() {
+    const toastEl = document.getElementById('limitToast');
+    if (toastEl) {
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+  }
+});
+// ------------------------------------------qv
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.qview').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = this.getAttribute('data-target');
+      const modalEl = document.querySelector(target);
+      if (!modalEl) return;
+
+      // start loading
+      this.classList.add('loading');
+
+      // small delay to show spinner
+      setTimeout(() => {
+        this.classList.remove('loading');
+
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }, 600); // change duration if needed
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Find all slider containers
+  document.querySelectorAll('.product-image-slider-container').forEach(container => {
+    const slides = container.querySelectorAll('.qvimage-slide');
+    const prevBtn = container.querySelector('.image-slider-prev');
+    const nextBtn = container.querySelector('.image-slider-next');
+    const dots = container.querySelectorAll('.dot');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    // Arrow events
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Dot events
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Touch swipe
+    let startX = 0;
+    container.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
+    
+    container.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+      }
+    });
+
+    // Auto play (optional)
+    // setInterval(nextSlide, 4000);
+  });
 });
