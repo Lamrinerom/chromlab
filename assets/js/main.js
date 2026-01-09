@@ -1,17 +1,73 @@
 let suggestions = [
-    "Channel",
-    "CodingLab",
+    "Automatic Fraction Collector",
+    "Element Analyzer",
+    "Gas Chromatography Mass Spectrometry",
+    "Gas Chromatography",
+    "Ion Chromatograph",
+    "Liquid Chromatography Mass Spectrometry",
+    "Liquid Chromatography",
+    "Portable GC-MS",
+    "Portable Ion Chromatograph",
+    "TLC Scanner",
+    "Triple Quadrupole",
+    "Automatic Fraction Collector CLFC-401",
+    "Element Analyzer CLEA-101",
+    "Gas Chromatograph-Mass Spectrometer CLGMS-601",
+    "Gas Chromatograph-Mass Spectrometer CLGMS-602",
+    "Gas Chromatography CLGC-601",
+    "Gas Chromatography CLGC-602",
+
+    "Ion Chromatograph CLIC-601",
+    "Ion Chromatograph CLIC-602",
+    "Ion Chromatograph CLIC-603",
+    "Ion Chromatograph CLIC-604",
+    "Ion Chromatograph CLIC-605",
+    "Liquid Chromatograph Mass Spectrometer CLMS-601",
+    "Liquid Chromatograph Mass Spectrometer CLMS-602",
+    "Liquid Chromatography CLLC-601",
+    "Liquid Chromatography CLLC-602",
+    "Liquid Chromatography CLLC-603",
+    "Portable GC-MS CLPCS-601",
+    "Portable GC-MS CLPCS-602",
+    "Portable Ion Chromatograph CLPIC-601",
+    "TLC Scanner CLTS-601",
+    "Triple Quadrupole GCMS CLTQC-601",
     
 ];
 
 // getting all required elements
 const searchInput = document.querySelector(".searchInput");
-const input = searchInput.querySelector("input");
+// const input = searchInput.querySelector("input");
 const resultBox = searchInput.querySelector(".resultBox");
 const icon = searchInput.querySelector(".icon");
+const input = document.querySelector("#labSearch");
 let linkTag = searchInput.querySelector("a");
 let webLink;
+// Auto-change placeholder for Chromlab
+const placeholders = [
+  "Search lab equipment…",
+  "Search centrifuge, oven…",
+  "Search Chromlab instruments…",
+  "Find lab solutions…",
+  "Explore lab products…",
+  "Discover lab tools…",
+  "TLC Scanner"
 
+];
+let phIndex = 0;
+let phTimer;
+
+function rotatePlaceholder() {
+  input.placeholder = placeholders[phIndex];  // Use existing 'input'
+  phIndex = (phIndex + 1) % placeholders.length;
+}
+
+// Start rotation
+phTimer = setInterval(rotatePlaceholder, 3000);
+
+// Pause during typing
+input.addEventListener("focus", () => clearInterval(phTimer));
+input.addEventListener("blur", () => phTimer = setInterval(rotatePlaceholder, 3000));
 // if user press any key and release
 input.onkeyup = (e)=>{
     let userData = e.target.value; //user enetered data
@@ -47,6 +103,7 @@ function showSuggestions(list){
     }
     resultBox.innerHTML = listData;
 }
+
 // ---------------------------------------------------------------------------bannee00000
 
 
