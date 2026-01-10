@@ -946,3 +946,53 @@ document.addEventListener('DOMContentLoaded', function () {
     // setInterval(nextSlide, 4000);
   });
 });
+
+// ---------------------------------pbc
+ // Simple dropdown/accordion behavior for sidebar categories [web:36][web:40]
+        document.addEventListener("DOMContentLoaded", () => {
+        const catButtons = document.querySelectorAll(".category-side-list .has-children");
+
+        catButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+            // Close other open items (accordion style)
+            catButtons.forEach(other => {
+                if (other !== btn) {
+                other.classList.remove("open");
+                }
+            });
+
+            // Toggle current
+            btn.classList.toggle("open");
+            });
+        });
+        });
+// ---------------------------------------------
+
+ document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".chrom-cards, .hor-card, .pbc-cards"); // all cards
+
+      cards.forEach(card => {
+        const tooltip = card.querySelector(".card-tooltip");
+        const btns = card.querySelectorAll(".buttons-section .btn");
+
+        if (!tooltip || !btns.length) return;
+
+        btns.forEach(btn => {
+          const text = btn.getAttribute("data-tip");
+
+          btn.addEventListener("mouseenter", () => {
+            tooltip.textContent = text;
+            tooltip.classList.add("show");
+          });
+
+          btn.addEventListener("mouseleave", () => {
+            tooltip.classList.remove("show");
+          });
+        });
+
+        const buttonsSection = card.querySelector(".buttons-section");
+        buttonsSection.addEventListener("mouseleave", () => {
+          tooltip.classList.remove("show");
+        });
+      });
+    });

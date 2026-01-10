@@ -22,7 +22,7 @@
   <body>
     <div class="chromelab-section">
       <header class="main-header">
-          <div class="top-header">
+          <div class="top-header" id="topHeader"> 
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 d-flex align-items-center taglogo">
@@ -84,11 +84,14 @@
                         </div>
                           <div class="search-bar">
                               <div class="searchInput">
-                                  <input type="text" placeholder="Search product here..">
-                                  <div class="resultBox">
-                                  <!-- here list are inserted from javascript -->
-                                  </div>
-                                  <div class="icon"><i class="fas fa-search"></i></div>
+                                <div class="placeholderWrapper">
+                                  <input type="text" id="labSearch" placeholder="Search product here..">
+                                  <span class="typingCursor"></span>
+                                </div>
+                                <div class="resultBox">
+                                <!-- here list are inserted from javascript -->
+                                </div>
+                                <div class="icon"><i class="fas fa-search"></i></div>
                               </div>
                           </div>
                       </div>
@@ -286,7 +289,7 @@
                     <nav class="main-nav">
                     <ul class="main-menu">
                       <li class="main-menu-list">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link navactive active" aria-current="page" href="index.html">Home</a>
                       </li>
                       <li class="main-menu-list">
                         <a class="nav-link" href="allcategory.html">Chromlab Categories</a>

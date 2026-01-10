@@ -22,14 +22,14 @@
 <body>
     <div class="chromelab-section">
       <header class="main-header">
-          <div class="top-header">
+          <div class="top-header" id="topHeader"> 
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 d-flex align-items-center taglogo">
-                        
+
                           <div class="logo" title="Chromlab Ltd.">
                               <a href="index.html"><img src="assets/images/chromlab.png" alt="chromelab Logo"></a>
-                          </div> 
+                          </div>
                       </div>
                       <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 order-3 order-sm-3 order-md-3 order-lg-2 order-xl-2 search-col">
                         <div class="mobilemenu-section nodesktop">
@@ -84,11 +84,14 @@
                         </div>
                           <div class="search-bar">
                               <div class="searchInput">
-                                  <input type="text" placeholder="Search product here..">
-                                  <div class="resultBox">
-                                  <!-- here list are inserted from javascript -->
-                                  </div>
-                                  <div class="icon"><i class="fas fa-search"></i></div>
+                                <div class="placeholderWrapper">
+                                  <input type="text" id="labSearch" placeholder="Search product here..">
+                                  <span class="typingCursor"></span>
+                                </div>
+                                <div class="resultBox">
+                                <!-- here list are inserted from javascript -->
+                                </div>
+                                <div class="icon"><i class="fas fa-search"></i></div>
                               </div>
                           </div>
                       </div>
@@ -106,9 +109,9 @@
                                                 <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
                                                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                               </div>
-                                            </div> 
+                                            </div>
                                         </li>
-                                        <li><a href="login.html" class="dromain">Login</a></li> 
+                                        <li><a href="login.html" class="dromain">Login</a></li>
                                     </ul> -->
                             </div>
                           </a>
@@ -120,20 +123,22 @@
                               <div class="wishlist-header">
                                   <h6>Wishlist <span class="badge bg-primary wishlistnumber" id="wishlistTotalCount">0</span></h6>
                               </div>
-                              
+
                               <div id="wishlistItemsContainer">
                                   <div class="wishlist-empty">
                                       <i class="hgi hgi-stroke hgi-heart-remove"></i>
                                       <p>Your wishlist is empty</p>
                                   </div>
                               </div>
-                              
+
                               <div class="wishlist-footer" style="display: none;">
                                   <a href="wishlist.html" class="wishlist-link">View All Items →</a>
                               </div>
                           </div>
                           <a href="#" class="account-section" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
+                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-cart-02 navcart"></i>
+                              <!-- <i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i> -->
+                            </div>
                             <div class="count-cart" id="cartCount">0</div>
                          </a>
                          <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasCart" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="offcanvasCartLabel">
@@ -150,7 +155,7 @@
                                   </div>
                                   <div class="cart-footer" style="display: none;">
                                       <div class="cart-total">
-                                          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                             <strong>Total: $<span id="cartTotal">0.00</span></strong>
                                       </div>
                                       <div class="cart-actions">
                                           <a href="cart.html" class="btn btn-outline-primary">View Cart</a>
@@ -167,9 +172,9 @@
           <div class="bottom-header">
               <div class="container-fluid">
                 <div class="wholebottom">
-                  <div class="tp-section">
+                  <!-- <div class="tp-section">
                     <div class="nav-top-title" id="topCatToggle">
-                      <span>TOP CATEGORY</span>    
+                      <span>TOP CATEGORY</span>
                       <i class="hgi hgi-stroke hgi-arrow-down-double"></i>
                     </div>
 
@@ -179,29 +184,16 @@
                           <a href="productbycategory.html">Automatic Fraction Collector</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Pumps</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/automatic-fraction-collector.jpg" alt=""></div>Automatic Fraction Collector CLFC-401</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">UV Detectors</a>
-                              <a href="#">PDA Detectors</a>
-                            </div> -->
                           </div>
                         </li>
 
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Element Analyzer</a>
                           <div class="mega-menu">
-                            <!-- <div class="mega-column">
-                              <h4>Injectors</h4>
-                              <a href="#">Split/Splitless</a>
-                              <a href="#">On‑Column</a>
-                            </div> -->
                             <div class="mega-column">
-                              <!-- <h4>Detectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products//element-analyzer.jpg" alt=""></div>Element Analyzer CLEA-101</a>
-                              <!-- <a href="#">TCD</a> -->
                             </div>
                           </div>
                         </li>
@@ -210,15 +202,9 @@
                           <a href="productbycategory.html">Gas Chromatograph-Mass Spectrometer</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -226,15 +212,9 @@
                           <a href="productbycategory.html">Gas Chromatography</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography.jpg" alt=""></div>Gas Chromatography CLGC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography.jpg" alt=""></div>Gas Chromatography CLGC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -242,18 +222,12 @@
                           <a href="productbycategory.html">Ion Chromatograph</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-602</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-603</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-604</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-605</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -261,99 +235,61 @@
                           <a href="productbycategory.html">Liquid Chromatograph Mass Spectrometer</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt=""></div>Liquid Chromatograph Mass Spectrometer CLMS-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt=""></div>Liquid Chromatograph Mass Spectrometer CLMS-602</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Liquid Chromatography</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-602</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-603</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Portable GC-MS</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/portable-gc-ms.jpg" alt=""></div>Portable GC-MS CLPCS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Portable Ion Chromatograph</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/portable-ion-chromatograph.jpg" alt=""></div>Portable Ion Chromatograph CLPIC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">TLC Scanner </a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/tlc-scanner-1740127345.jpg" alt=""></div>TLC Scanner CLTS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Triple Quadrupole GC-MS</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" alt=""></div>Triple Quadrupole GCMS CLTQC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
-
-
                       </ul>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="w-100 d-flex justify-content-between">
                     <nav class="main-nav">
                     <ul class="main-menu">
                       <li class="main-menu-list">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link navactive active" aria-current="page" href="index.html">Home</a>
                       </li>
                       <li class="main-menu-list">
                         <a class="nav-link" href="allcategory.html">Chromlab Categories</a>

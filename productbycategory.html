@@ -22,14 +22,14 @@
 <body>
     <div class="chromelab-section">
       <header class="main-header">
-          <div class="top-header">
+          <div class="top-header" id="topHeader"> 
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1 d-flex align-items-center taglogo">
-                        
+
                           <div class="logo" title="Chromlab Ltd.">
                               <a href="index.html"><img src="assets/images/chromlab.png" alt="chromelab Logo"></a>
-                          </div> 
+                          </div>
                       </div>
                       <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12 order-3 order-sm-3 order-md-3 order-lg-2 order-xl-2 search-col">
                         <div class="mobilemenu-section nodesktop">
@@ -84,11 +84,14 @@
                         </div>
                           <div class="search-bar">
                               <div class="searchInput">
-                                  <input type="text" placeholder="Search product here..">
-                                  <div class="resultBox">
-                                  <!-- here list are inserted from javascript -->
-                                  </div>
-                                  <div class="icon"><i class="fas fa-search"></i></div>
+                                <div class="placeholderWrapper">
+                                  <input type="text" id="labSearch" placeholder="Search product here..">
+                                  <span class="typingCursor"></span>
+                                </div>
+                                <div class="resultBox">
+                                <!-- here list are inserted from javascript -->
+                                </div>
+                                <div class="icon"><i class="fas fa-search"></i></div>
                               </div>
                           </div>
                       </div>
@@ -106,9 +109,9 @@
                                                 <label for="exampleFormControlInput1" class="form-label">User name / Email</label>
                                                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                               </div>
-                                            </div> 
+                                            </div>
                                         </li>
-                                        <li><a href="login.html" class="dromain">Login</a></li> 
+                                        <li><a href="login.html" class="dromain">Login</a></li>
                                     </ul> -->
                             </div>
                           </a>
@@ -120,20 +123,22 @@
                               <div class="wishlist-header">
                                   <h6>Wishlist <span class="badge bg-primary wishlistnumber" id="wishlistTotalCount">0</span></h6>
                               </div>
-                              
+
                               <div id="wishlistItemsContainer">
                                   <div class="wishlist-empty">
                                       <i class="hgi hgi-stroke hgi-heart-remove"></i>
                                       <p>Your wishlist is empty</p>
                                   </div>
                               </div>
-                              
+
                               <div class="wishlist-footer" style="display: none;">
                                   <a href="wishlist.html" class="wishlist-link">View All Items →</a>
                               </div>
                           </div>
                           <a href="#" class="account-section" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
-                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i></div>
+                            <div class="icon3"><i class="hgi hgi-stroke hgi-shopping-cart-02 navcart"></i>
+                              <!-- <i class="hgi hgi-stroke hgi-shopping-bag-01 navcart"></i> -->
+                            </div>
                             <div class="count-cart" id="cartCount">0</div>
                          </a>
                          <div class="offcanvas cart-off offcanvas-end" tabindex="-1" id="offcanvasCart" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="offcanvasCartLabel">
@@ -150,7 +155,7 @@
                                   </div>
                                   <div class="cart-footer" style="display: none;">
                                       <div class="cart-total">
-                                          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                                             <strong>Total: $<span id="cartTotal">0.00</span></strong>
                                       </div>
                                       <div class="cart-actions">
                                           <a href="cart.html" class="btn btn-outline-primary">View Cart</a>
@@ -167,9 +172,9 @@
           <div class="bottom-header">
               <div class="container-fluid">
                 <div class="wholebottom">
-                  <div class="tp-section">
+                  <!-- <div class="tp-section">
                     <div class="nav-top-title" id="topCatToggle">
-                      <span>TOP CATEGORY</span>    
+                      <span>TOP CATEGORY</span>
                       <i class="hgi hgi-stroke hgi-arrow-down-double"></i>
                     </div>
 
@@ -179,29 +184,16 @@
                           <a href="productbycategory.html">Automatic Fraction Collector</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Pumps</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/automatic-fraction-collector.jpg" alt=""></div>Automatic Fraction Collector CLFC-401</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">UV Detectors</a>
-                              <a href="#">PDA Detectors</a>
-                            </div> -->
                           </div>
                         </li>
 
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Element Analyzer</a>
                           <div class="mega-menu">
-                            <!-- <div class="mega-column">
-                              <h4>Injectors</h4>
-                              <a href="#">Split/Splitless</a>
-                              <a href="#">On‑Column</a>
-                            </div> -->
                             <div class="mega-column">
-                              <!-- <h4>Detectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products//element-analyzer.jpg" alt=""></div>Element Analyzer CLEA-101</a>
-                              <!-- <a href="#">TCD</a> -->
                             </div>
                           </div>
                         </li>
@@ -210,15 +202,9 @@
                           <a href="productbycategory.html">Gas Chromatograph-Mass Spectrometer</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt=""></div>Gas Chromatograph-Mass Spectrometer CLGMS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -226,15 +212,9 @@
                           <a href="productbycategory.html">Gas Chromatography</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography.jpg" alt=""></div>Gas Chromatography CLGC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/gas-chromatography.jpg" alt=""></div>Gas Chromatography CLGC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -242,18 +222,12 @@
                           <a href="productbycategory.html">Ion Chromatograph</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-602</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-603</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-604</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt=""></div>Ion Chromatograph CLIC-605</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
 
@@ -261,99 +235,61 @@
                           <a href="productbycategory.html">Liquid Chromatograph Mass Spectrometer</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt=""></div>Liquid Chromatograph Mass Spectrometer CLMS-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" alt=""></div>Liquid Chromatograph Mass Spectrometer CLMS-602</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Liquid Chromatography</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-601</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-602</a>
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/liquid-chromatography-1738666603.jpg" alt=""></div>Liquid Chromatography CLLC-603</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Portable GC-MS</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/portable-gc-ms.jpg" alt=""></div>Portable GC-MS CLPCS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Portable Ion Chromatograph</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/portable-ion-chromatograph.jpg" alt=""></div>Portable Ion Chromatograph CLPIC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">TLC Scanner </a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/tlc-scanner-1740127345.jpg" alt=""></div>TLC Scanner CLTS-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
                         <li class="top-cat-item">
                           <a href="productbycategory.html">Triple Quadrupole GC-MS</a>
                           <div class="mega-menu">
                             <div class="mega-column">
-                              <!-- <h4>Injectors</h4> -->
                               <a href="productdescription.html"><div class="sideimg"><img src="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" alt=""></div>Triple Quadrupole GCMS CLTQC-601</a>
                             </div>
-                            <!-- <div class="mega-column">
-                              <h4>Detectors</h4>
-                              <a href="#">Element Analyzer CLEA-101</a>
-                              <a href="#">TCD</a>
-                            </div> -->
                           </div>
                         </li>
-
-
                       </ul>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="w-100 d-flex justify-content-between">
                     <nav class="main-nav">
                     <ul class="main-menu">
                       <li class="main-menu-list">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link navactive active" aria-current="page" href="index.html">Home</a>
                       </li>
                       <li class="main-menu-list">
                         <a class="nav-link" href="allcategory.html">Chromlab Categories</a>
@@ -392,102 +328,102 @@
                 </ol>
             </nav>
         </section>
-        <section class="pbc">
+        <section class="pbc hold-ban">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-3">
-                        <div class="category-side-list">
-                            <h5 class="category-title">Chromlab Categories</h5>
-                                <button class="cat-item has-children">
-                                    Automatic Fraction Collector
-                                    <span class="arrow">1</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Automatic Fraction Collector CLFC-401</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Element Analyzer
-                                    <span class="arrow">1</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Element Analyzer CLEA-101</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Gas Chromatograph-Mass Spectrometer
-                                    <span class="arrow">2</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-601</a></li>
-                                    <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-602</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Gas Chromatography
-                                    <span class="arrow">2</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Gas Chromatography CLGC-601</a></li>
-                                    <li><a href="productdescription.html">Gas Chromatography CLGC-602</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Ion Chromatograph
-                                    <span class="arrow">5</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-601</a></li>
-                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-602</a></li>
-                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-603</a></li>
-                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-604</a></li>
-                                    <li><a href="productdescription.html">Ion Chromatograph CLIC-605</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Liquid Chromatograph Mass Spectrometer
-                                    <span class="arrow">2</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-601</a></li>
-                                    <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-602</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Liquid Chromatography
-                                    <span class="arrow">3</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-601</a></li>
-                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-602</a></li>
-                                    <li><a href="productdescription.html">Liquid Chromatography CLLC-603</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Portable GC-MS
-                                    <span class="arrow">1</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Portable GC-MS CLPCS-601</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Portable Ion Chromatograph
-                                    <span class="arrow">1</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Portable Ion Chromatograph CLPIC-601</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    TLC Scanner 
-                                    <span class="arrow">1</span>
-                                </button>
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">TLC Scanner CLTS-601</a></li>
-                                </ul>
-                                <button class="cat-item has-children">
-                                    Triple Quadrupole GC-MS
-                                    <span class="arrow">1</span>
-                                </button> 
-                                <ul class="sub-cat-list">
-                                    <li><a href="productdescription.html">Triple Quadrupole GCMS CLTQC-601</a></li>
-                                </ul>
-                            <!-- <a href="#" class="cat-item">
-                            Skincare Devices
-                            </a> -->
-                        </div>
+                      <div class="category-side-list">
+                          <h5 class="category-title">Chromlab Categories</h5>
+                              <button class="cat-item has-children">
+                                  Automatic Fraction Collector
+                                  <span class="arrow">1</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Automatic Fraction Collector CLFC-401</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Element Analyzer
+                                  <span class="arrow">1</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Element Analyzer CLEA-101</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Gas Chromatograph-Mass Spectrometer
+                                  <span class="arrow">2</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-601</a></li>
+                                  <li><a href="productdescription.html">Gas Chromatograph-Mass Spectrometer CLGMS-602</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Gas Chromatography
+                                  <span class="arrow">2</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Gas Chromatography CLGC-601</a></li>
+                                  <li><a href="productdescription.html">Gas Chromatography CLGC-602</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Ion Chromatograph
+                                  <span class="arrow">5</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Ion Chromatograph CLIC-601</a></li>
+                                  <li><a href="productdescription.html">Ion Chromatograph CLIC-602</a></li>
+                                  <li><a href="productdescription.html">Ion Chromatograph CLIC-603</a></li>
+                                  <li><a href="productdescription.html">Ion Chromatograph CLIC-604</a></li>
+                                  <li><a href="productdescription.html">Ion Chromatograph CLIC-605</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Liquid Chromatograph Mass Spectrometer
+                                  <span class="arrow">2</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-601</a></li>
+                                  <li><a href="productdescription.html">Liquid Chromatograph Mass Spectrometer CLMS-602</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Liquid Chromatography
+                                  <span class="arrow">3</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Liquid Chromatography CLLC-601</a></li>
+                                  <li><a href="productdescription.html">Liquid Chromatography CLLC-602</a></li>
+                                  <li><a href="productdescription.html">Liquid Chromatography CLLC-603</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Portable GC-MS
+                                  <span class="arrow">1</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Portable GC-MS CLPCS-601</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Portable Ion Chromatograph
+                                  <span class="arrow">1</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Portable Ion Chromatograph CLPIC-601</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  TLC Scanner 
+                                  <span class="arrow">1</span>
+                              </button>
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">TLC Scanner CLTS-601</a></li>
+                              </ul>
+                              <button class="cat-item has-children">
+                                  Triple Quadrupole GC-MS
+                                  <span class="arrow">1</span>
+                              </button> 
+                              <ul class="sub-cat-list">
+                                  <li><a href="productdescription.html">Triple Quadrupole GCMS CLTQC-601</a></li>
+                              </ul>
+                          <!-- <a href="#" class="cat-item">
+                          Skincare Devices
+                          </a> -->
+                      </div>
                     </div>
                     <div class="col-xl-9">
                         <div class="titleofpage pt-0">
@@ -495,166 +431,348 @@
                             <p>Ion chromatographs separate and detect ions like anions (chloride, nitrate, sulfate) and cations (sodium, potassium) in samples using ion exchange principles. These systems are essential for high-sensitivity analysis in laboratories.</p>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="pbc-cards">
-                                    <div class="pbc-img-section">
-                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
-                                    </div>
-                                    <div class="pbc-product-name">
-                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-601</h3></a>
-                                    </div>
-                                    <div class="specs-list">
-                                        <ul>
-                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
-                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
-                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
-                                            <li><span>Display :</span> <span>LED</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons-section">
-                                        <a href="productdescription.html">Explore</a>
-                                        <button class="btn cart" data-tip="Add to cart">
-                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
-                                        </button>
-                                        <button class="btn view" data-tip="View product">
-                                            <i class="hgi hgi-stroke hgi-view"></i>
-                            
-                                        </button>
-                                        <button class="btn catalog" data-tip="Download catalog">
-                                            <i class="hgi hgi-stroke hgi-download-02"></i>
-                                        </button>
-                                        <div class="card-tooltip" id="cardTip1"></div>
-                                    </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-601</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-601"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr38"
+                                  data-product-name="Ion Chromatograph CLIC-601"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pbc-cards">
-                                    <div class="pbc-img-section">
-                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
-                                    </div>
-                                    <div class="pbc-product-name">
-                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-602</h3></a>
-                                    </div>
-                                    <div class="specs-list">
-                                        <ul>
-                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
-                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
-                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
-                                            <li><span>Display :</span> <span>LED</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons-section">
-                                        <a href="productdescription.html">Explore</a>
-                                        <button class="btn cart" data-tip="Add to cart">
-                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
-                                        </button>
-                                        <button class="btn view" data-tip="View product">
-                                            <i class="hgi hgi-stroke hgi-view"></i>
-                            
-                                        </button>
-                                        <button class="btn catalog" data-tip="Download catalog">
-                                            <i class="hgi hgi-stroke hgi-download-02"></i>
-                                        </button>
-                                        <div class="card-tooltip" id="cardTip1"></div>
-                                    </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-602</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-602"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr39"
+                                  data-product-name="Ion Chromatograph CLIC-602"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#39Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-602" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pbc-cards">
-                                    <div class="pbc-img-section">
-                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
-                                    </div>
-                                    <div class="pbc-product-name">
-                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-603</h3></a>
-                                    </div>
-                                    <div class="specs-list">
-                                        <ul>
-                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
-                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
-                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
-                                            <li><span>Display :</span> <span>LED</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons-section">
-                                        <a href="productdescription.html">Explore</a>
-                                        <button class="btn cart" data-tip="Add to cart">
-                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
-                                        </button>
-                                        <button class="btn view" data-tip="View product">
-                                            <i class="hgi hgi-stroke hgi-view"></i>
-                            
-                                        </button>
-                                        <button class="btn catalog" data-tip="Download catalog">
-                                            <i class="hgi hgi-stroke hgi-download-02"></i>
-                                        </button>
-                                        <div class="card-tooltip" id="cardTip1"></div>
-                                    </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-603</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-603"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr40"
+                                  data-product-name="Ion Chromatograph CLIC-603"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#40Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-603" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pbc-cards">
-                                    <div class="pbc-img-section">
-                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
-                                    </div>
-                                    <div class="pbc-product-name">
-                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
-                                    </div>
-                                    <div class="specs-list">
-                                        <ul>
-                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
-                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
-                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
-                                            <li><span>Display :</span> <span>LED</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons-section">
-                                        <a href="productdescription.html">Explore</a>
-                                        <button class="btn cart" data-tip="Add to cart">
-                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
-                                        </button>
-                                        <button class="btn view" data-tip="View product">
-                                            <i class="hgi hgi-stroke hgi-view"></i>
-                            
-                                        </button>
-                                        <button class="btn catalog" data-tip="Download catalog">
-                                            <i class="hgi hgi-stroke hgi-download-02"></i>
-                                        </button>
-                                        <div class="card-tooltip" id="cardTip1"></div>
-                                    </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr41"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#41Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pbc-cards">
-                                    <div class="pbc-img-section">
-                                        <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="" alt="Ion Chromatograph CLIC-601">
-                                    </div>
-                                    <div class="pbc-product-name">
-                                        <a href="productdescription.html"><h3>Ion Chromatograph CLIC-605</h3></a>
-                                    </div>
-                                    <div class="specs-list">
-                                        <ul>
-                                            <li><span>Cell Volume :</span> <span> ≤ 0.8 μL</span></li>
-                                            <li><span>Detection Range :</span> <span>0 to 35000 μS/cm</span></li>
-                                            <li><span>Baseline Noise :</span> <span>≤ 0.05% FS</span></li>
-                                            <li><span>Display :</span> <span>LED</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons-section">
-                                        <a href="productdescription.html">Explore</a>
-                                        <button class="btn cart" data-tip="Add to cart">
-                                        <i class="hgi hgi-stroke hgi-shopping-bag-01"></i>
-                                        </button>
-                                        <button class="btn view" data-tip="View product">
-                                            <i class="hgi hgi-stroke hgi-view"></i>
-                            
-                                        </button>
-                                        <button class="btn catalog" data-tip="Download catalog">
-                                            <i class="hgi hgi-stroke hgi-download-02"></i>
-                                        </button>
-                                        <div class="card-tooltip" id="cardTip1"></div>
-                                    </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr42"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#42Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
                             </div>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-4">
+                            <div class="chrom-cards">
+                              <div class="chrom-product-name">
+                                <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
+                              </div>
+                              <div class="vert-btn">
+                                <button class="btn view" data-tip="Wishlist"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+                                  data-product-price="299.99">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+                                </button>
+                                <button class="btn card_compare"
+                                  data-product-id="cpr43"
+                                  data-product-name="Ion Chromatograph CLIC-604"
+                                  data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg">
+                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                </button>
+                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#43Modal">
+                                  <i class="hgi hgi-stroke hgi-view"></i>
+                                  <span class="spinner-border spinner-border-sm" role="status"></span>
+                                </button>
+                              </div>
+                              <div class="chrom-img-section">
+                                <div class="chrom-slider" >
+                                  <div class="chrom-slides">
+                                    <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="price-section">
+                                <span>$ 1299.00</span><span>1500</span>
+                              </div>
+                              <div class="specs-list">
+                                <ul>
+                                  <li><span>Tube quantity :</span> <span>100</span></li>
+                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                  <li><span>Display :</span> <span>LED</span></li>
+                                </ul>
+                              </div>
+                              <div class="buttons-section">
+                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                <button class="btn cart" data-tip="Add to cart" data-product-name="Ion Chromatograph CLIC-604" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                </button>
+                                <!-- <button class="btn view" data-tip="Wishlist" data-product-name="Ion Chromatograph CLIC-601" data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                                </button>
+                                <button class="btn catalog" data-tip="Download Catalog" onclick="window.location.href='singlecatalog.html'">
+                                  <i class="hgi hgi-stroke hgi-download-02"></i>
+                                </button> -->
+                                  <div class="card-tooltip" id="cardTip1"></div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -741,62 +859,404 @@
             </div>
        </footer>
     </div>
+    <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+        data-bs-scroll="true" data-bs-backdrop="true" data-bs-keyboard="false"
+        aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+            Compare Products <span class="badge bg-primary ms-1" id="countBadge">0</span>
+          </h5>
+          <div class="text-end justify-content-left ms-4 d-none" id="compareActions">
+            <a href="/compare" class="btn btn-primary btn-sm" id="viewAllCompare">
+              Compare
+            </a>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body com-off-body small">
+          <div id="emptyState" class="text-center text-muted py-4">
+            <p class="mb-0 small">No products selected for comparison</p>
+            <p class="text-xs">Click compare button on products to add them</p>
+          </div>
+
+          <div id="compareList" class="d-none d-flex gap-3 flex-wrap"></div>
+
+
+        </div>
+      </div> 
+    <div class="modal fade" id="38Modal" tabindex="-1" aria-labelledby="38ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="38ModalLabel">Ion Chromatograph CLIC-601</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-601" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-601 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-601 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1299.00 <span class="text-muted text-decoration-line-through">$ 1500.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-601 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-601"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1299.00"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-601"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1299.00"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="39Modal" tabindex="-1" aria-labelledby="39ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="39ModalLabel">Ion Chromatograph CLIC-602</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-602" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-602 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-602 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1399.00 <span class="text-muted text-decoration-line-through">$ 1500.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-602 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-602"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1399.00"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-602"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1399.00"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="40Modal" tabindex="-1" aria-labelledby="40ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="40ModalLabel">Ion Chromatograph CLIC-603</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-603" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-603 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-603 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1499.00 <span class="text-muted text-decoration-line-through">$ 1500.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-603 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-603"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1499.00"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-603"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="1499.00"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="41Modal" tabindex="-1" aria-labelledby="41ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="41ModalLabel">Ion Chromatograph CLIC-604</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-604" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-604 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-604 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1500.00 <span class="text-muted text-decoration-line-through">$ 1800.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-604 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-604"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-604"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="42Modal" tabindex="-1" aria-labelledby="42ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="42ModalLabel">Ion Chromatograph CLIC-605</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-605" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-605 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-605 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1699.00 <span class="text-muted text-decoration-line-through">$ 1800.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-605 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-605"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-605"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="43Modal" tabindex="-1" aria-labelledby="43ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header vqmheader">
+            <p class="modal-title qvtitle fs-4" id="43ModalLabel">Ion Chromatograph CLIC-606</p>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="position-relative">
+                  <div class="product-image-slider-container">
+                    <div class="qvimage-slide active">
+                      <img src="assets/images/products/ion-chromatograph-1737962696.jpg" alt="CLIC-606" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/element-analyzer.jpg" alt="CLIC-606 Alt 1" class="img-fluid">
+                    </div>
+                    <div class="qvimage-slide">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" alt="CLIC-606 Alt 2" class="img-fluid">
+                    </div>
+                    <button class="image-slider-prev">
+                      <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+                    </button>
+                    <button class="image-slider-next">
+                      <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+                    </button>
+                    <div class="image-slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h5 class="qvrealprice mb-3">$ 1699.00 <span class="text-muted text-decoration-line-through">$ 1800.00</span></h5>
+                <p class="qvdescription">The Ion Chromatograph CLIC-606 is designed for precise and efficient analysis of ionic compounds in laboratory settings. It features high-resolution detection, multiple column options, and a user-friendly interface.</p>
+                <ul class="qvul">
+                  <li>Column Capacity: Up to 200 tubes</li>
+                  <li>Tube Sizes: Compatible with 10ml, 15ml, and 50ml tubes</li>
+                  <li>Programmable Intervals: Adjustable from 1 second to 99 minutes</li>
+                  <li>Dimensions: 40cm x 30cm x 25cm</li>
+                  <li>Weight: 8 kg</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer qvfooter">
+            <button type="button" class="btn qvwish" data-product-name="Ion Chromatograph CLIC-606"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-favourite"></i>
+            </button>
+            <button class="btn btn-outline-primary view_details">Details</button>
+            <button type="button" class="btn btn-primary qvcart-btn" data-product-name="Ion Chromatograph CLIC-606"
+              data-product-img="assets/images/products/ion-chromatograph-1737962696.jpg"
+              data-product-price="250.99"><i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>Add to Cart</button>
+        </div>
+        </div>
+      </div>
+    </div>
     <script src="assets/js/atcw.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script>
-        // Simple dropdown/accordion behavior for sidebar categories [web:36][web:40]
-        document.addEventListener("DOMContentLoaded", () => {
-        const catButtons = document.querySelectorAll(".category-side-list .has-children");
-
-        catButtons.forEach(btn => {
-            btn.addEventListener("click", () => {
-            // Close other open items (accordion style)
-            catButtons.forEach(other => {
-                if (other !== btn) {
-                other.classList.remove("open");
-                }
-            });
-
-            // Toggle current
-            btn.classList.toggle("open");
-            });
-        });
-        });
-
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-      const cards = document.querySelectorAll(".chrom-cards, .hor-card, .pbc-cards"); // all cards
-
-      cards.forEach(card => {
-        const tooltip = card.querySelector(".card-tooltip");
-        const btns = card.querySelectorAll(".buttons-section .btn");
-
-        if (!tooltip || !btns.length) return;
-
-        btns.forEach(btn => {
-          const text = btn.getAttribute("data-tip");
-
-          btn.addEventListener("mouseenter", () => {
-            tooltip.textContent = text;
-            tooltip.classList.add("show");
-          });
-
-          btn.addEventListener("mouseleave", () => {
-            tooltip.classList.remove("show");
-          });
-        });
-
-        const buttonsSection = card.querySelector(".buttons-section");
-        buttonsSection.addEventListener("mouseleave", () => {
-          tooltip.classList.remove("show");
-        });
-      });
-    });
-    </script>
+  
 </body>
 
 </html>
