@@ -2,8 +2,9 @@ let cart = [];
 let cartOffcanvasInstance = null; 
 // Initialize cart functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Add to cart button event listeners
-  const allCartButtons = document.querySelectorAll('.btn.cart, .qvcart-btn');
+  setupProductQuantityControls();
+  // Add to cart button event listeners - ALL TYPES
+  const allCartButtons = document.querySelectorAll('.btn.cart, .qvcart-btn, .add-to-cart');
   
   allCartButtons.forEach(button => {
     button.addEventListener('click', function(e) {
@@ -27,6 +28,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   updateCartDisplay();
 });
+// NEW: Setup quantity controls on product description pages
+function setupProductQuantityControls() {
+  // Handle plus/minus buttons
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('qty-plus')) {
+      e.preventDefault();
+      const input = e.target.previousElementSibling;
+      let val = parseInt(input.value) || 1;
+      if (val < parseInt(input.max)) {
+        input.value = val + 1;
+      }
+    } else if (e.target.classList.contains('qty-minus')) {
+      e.preventDefault();
+      const input = e.target.nextElementSibling;
+      let val = parseInt(input.value) || 1;
+      if (val > parseInt(input.min)) {
+        input.value = val - 1;
+      }
+    }
+  });
+
+  // Handle direct input changes
+  document.addEventListener('input', function(e) {
+    if (e.target.classList.contains('qty-input')) {
+      let val = parseInt(e.target.value) || 1;
+      const min = parseInt(e.target.min) || 1;
+      const max = parseInt(e.target.max) || 99;
+      if (val < min) val = min;
+      if (val > max) val = max;
+      e.target.value = val;
+    }
+  });
+}
+
 // Global backdrop cleanup
 document.addEventListener('click', function(e) {
     // Clean up any lingering backdrops
@@ -37,6 +72,14 @@ document.addEventListener('click', function(e) {
     });
 });
 function addToCart(button) {
+  // Get closest addtocart container to find quantity input
+  const addToCartContainer = button.closest('.addtocart') || button.closest('.product-qty')?.parentElement;
+  let quantity = 1;
+  
+  if (addToCartContainer) {
+    const qtyInput = addToCartContainer.querySelector('.qty-input');
+    quantity = parseInt(qtyInput?.value) || 1;
+  }
   const productName = button.getAttribute('data-product-name');
   const productImg = button.getAttribute('data-product-img');
   const productPrice = parseFloat(button.getAttribute('data-product-price'));
@@ -50,14 +93,14 @@ function addToCart(button) {
   const existingItem = cart.find(item => item.name === productName);
 
   if (existingItem) {
-    existingItem.quantity += 1;
+    existingItem.quantity += quantity;
   } else {
     cart.push({
       id: Date.now(),
       name: productName,
       img: productImg,
       price: productPrice,
-      quantity: 1
+      quantity: quantity
     });
   }
 
@@ -996,3 +1039,226 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
+
+// ---------------------------------------------------Loader
+
+// JS to show loading cards then replace with real content
+// Universal Multi-Tab Loading System
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle ALL Bootstrap tabs automatically
+  const tabButtons = document.querySelectorAll('[data-bs-toggle="pill"]');
+  const tabPanes = document.querySelectorAll('.tab-pane, .tab-content > div');
+  
+  tabButtons.forEach(tabBtn => {
+    tabBtn.addEventListener('shown.bs.tab', function(e) {
+      const targetTabId = e.target.getAttribute('data-bs-target');
+      const targetPane = document.querySelector(targetTabId);
+      
+      if (targetPane) {
+        showLoadingForTab(targetPane);
+      }
+    });
+  });
+  
+  // Initial active tab
+  const activeTab = document.querySelector('.tab-pane.show.active, [aria-selected="true"]');
+  if (activeTab) {
+    showLoadingForTab(activeTab);
+  }
+});
+
+function showLoadingForTab(tabPane) {
+  // Find loading container and real content in this specific tab
+  const loadingContainer = tabPane.querySelector('.loading-container');
+  const realProducts = tabPane.querySelector('.real-products');
+  
+  if (!loadingContainer || !realProducts) return;
+  
+  // Reset states
+  loadingContainer.style.display = 'flex';
+  realProducts.style.display = 'none';
+  realProducts.style.opacity = '0';
+  
+  // Generate fresh loading cards for this tab
+  generateLoadingCardsForTab(loadingContainer);
+  
+  // Simulate load (replace with YOUR API call)
+  setTimeout(() => {
+    loadingContainer.style.display = 'none';
+    realProducts.style.display = 'block';
+    
+    // Smooth fade-in
+    realProducts.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+      realProducts.style.opacity = '1';
+    }, 50);
+  }, 1500 + Math.random() * 1000); // Random 1.5-2.5s for realism
+}
+
+function generateLoadingCardsForTab(container, count = 6) {
+  container.innerHTML = ''; // Clear previous
+  
+  for(let i = 0; i < count; i++) {
+    const col = document.createElement('div');
+    col.className = 'col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4';
+    col.innerHTML = `
+      <div class="chrom-cards loading-card">
+        <div class="vert-btn loading-shimmer"></div>
+        <div class="chrom-img-section">
+          <div class="chrom-slider">
+            <div class="chrom-slides">
+              <div class="chrom-slide skeleton-image"></div>
+            </div>
+          </div>
+        </div>
+        <div class="chrom-product-name">
+          <div class="skeleton-text skeleton-title"></div>
+        </div>
+        <div class="price-section">
+          <div class="skeleton-text skeleton-price"></div>
+        </div>
+        <div class="specs-list">
+          <div class="skeleton-text skeleton-spec"></div>
+          <div class="skeleton-text skeleton-spec"></div>
+          <div class="skeleton-text skeleton-spec"></div>
+          <div class="skeleton-text skeleton-spec"></div>
+        </div>
+        
+      </div>
+    `;
+    container.appendChild(col);
+  }
+}
+// {
+// <div class="buttons-section">
+//           <div class="skeleton-button skeleton-explore"></div>
+//           <div class="skeleton-button skeleton-cart"></div>
+//         </div>}
+// Replace setTimeout with your actual fetch
+async function loadProductsForTab(tabId) {
+  try {
+    const response = await fetch(`/api/products?category=${tabId}`);
+    const products = await response.json();
+    
+    // Update real-products HTML with fetched data
+    const realProducts = document.querySelector(`${tabId} .real-products`);
+    realProducts.innerHTML = generateProductHTML(products);
+    
+  } catch (error) {
+    console.error('Load failed:', error);
+  }
+}
+
+// In showLoadingForTab(), replace setTimeout:
+setTimeout(() => {
+  loadProductsForTab(targetTabId);
+}, 500);
+
+
+// -------------------------------------------megamenu
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Close mega menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const megamenu = document.querySelector('.megamenu-dropdown');
+        const trigger = document.querySelector('.has-megamenu');
+        
+        if (!trigger.contains(e.target) && !megamenu.contains(e.target)) {
+            megamenu.style.opacity = '0';
+            megamenu.style.visibility = 'hidden';
+        }
+    });
+    
+    // Smooth scroll prevention
+    const links = document.querySelectorAll('.megamenu-column a');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {   
+            // Add your analytics or smooth scroll here
+        });
+    });
+});
+// -----------------------------testimonials slider
+
+// Unique carousel instance
+const carouselId = 'uniqueTestimonialCarousel1';
+const trackId = 'uniqueCarouselTrack1';
+const prevBtnId = 'uniquePrevBtn1';
+const nextBtnId = 'uniqueNextBtn1';
+const dotsId = 'uniqueCarouselDots1';
+
+class TestimonialCarousel {
+    constructor(carouselId) {
+        this.carousel = document.getElementById(carouselId);
+        this.track = document.getElementById(trackId);
+        this.slides = this.carousel.querySelectorAll('.carousel-slide');
+        this.prevBtn = document.getElementById(prevBtnId);
+        this.nextBtn = document.getElementById(nextBtnId);
+        this.dotsContainer = document.getElementById(dotsId);
+        this.currentSlide = 0;
+        this.slideCount = this.slides.length;
+        this.init();
+    }
+
+    init() {
+        this.createDots();
+        this.updateCarousel();
+        this.bindEvents();
+        // Auto-slide every 5 seconds
+        this.autoSlide();
+    }
+
+    createDots() {
+        this.dotsContainer.innerHTML = '';
+        for (let i = 0; i < this.slideCount; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => this.goToSlide(i));
+            this.dotsContainer.appendChild(dot);
+        }
+        this.dots = this.dotsContainer.querySelectorAll('.dot');
+    }
+
+    bindEvents() {
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+    }
+
+    updateCarousel() {
+        // Remove active from all
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active to current
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+
+        // Transform track (for multi-slide preview if needed)
+        const translateX = -this.currentSlide * 100;
+        this.track.style.transform = `translateX(${translateX}%)`;
+    }
+
+    nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.slideCount;
+        this.updateCarousel();
+    }
+
+    prevSlide() {
+        this.currentSlide = (this.currentSlide - 1 + this.slideCount) % this.slideCount;
+        this.updateCarousel();
+    }
+
+    goToSlide(index) {
+        this.currentSlide = index;
+        this.updateCarousel();
+    }
+
+    autoSlide() {
+        setInterval(() => {
+            this.nextSlide();
+        }, 8000);
+    }
+}
+
+// Initialize
+new TestimonialCarousel(carouselId);

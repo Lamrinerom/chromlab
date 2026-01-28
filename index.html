@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -96,7 +97,7 @@
                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3 cartsection">
                         <div class="user-services">
                           <a href="login.html" class="account-section" title="Login">
-                            <div class="icon1"><i class="hgi hgi-stroke hgi-user-list"></i></div>
+                            <div class="icon1"><i class="lni lni-user-4"></i></div>
                             <div class="accontent">
                                 <!-- <span class="sn">Sign In</span> -->
                                 <!-- <div class="acc dropdown-toggle"><span>Login</span></div> -->
@@ -289,12 +290,68 @@
                       <li class="main-menu-list">
                         <a class="nav-link navactive active" aria-current="page" href="index.html">Home</a>
                       </li>
-                      <li class="main-menu-list">
+                      <li class="main-menu-list has-megamenu">
                         <a class="nav-link" href="allcategory.html">Chromlab Categories</a>
+                        <div class="megamenu-dropdown">
+                            <div class="megamenu-container">
+                                <div class="megamenu-content">
+                                    <!-- Column 1 -->
+                                    <div class="megamenu-column">
+                                        <h4>Chromatography</h4>
+                                        <ul>
+                                            <li><a href="">Ion Chromatograph</a></li>
+                                            <li><a href="">Gas Chromatograph</a></li>
+                                            <li><a href="">Liquid Chromatograph</a></li>
+                                            <li><a href="">HPLC Systems</a></li>
+                                            <li><a href="">UHPLC Systems</a></li>
+                                            <li><a href="">GC-MS Systems</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Column 2 -->
+                                    <div class="megamenu-column">
+                                        <h4>Spectroscopy</h4>
+                                        <ul>
+                                            <li><a href="">UV-Vis Spectrophotometer</a></li>
+                                            <li><a href="">FTIR Spectrometer</a></li>
+                                            <li><a href="">UV-Visible Reader</a></li>
+                                            <li><a href="">Fluorescence Spectrometer</a></li>
+                                            <li><a href="">Raman Spectrometer</a></li>
+                                            <li><a href="">NIR Spectrophotometer</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Column 3 -->
+                                    <div class="megamenu-column">
+                                        <h4>Lab Essentials</h4>
+                                        <ul>
+                                            <li><a href="">Pipettes & Dispensers</a></li>
+                                            <li><a href="">Incubators</a></li>
+                                            <li><a href="">Shakers & Mixers</a></li>
+                                            <li><a href="">Centrifuges</a></li>
+                                            <li><a href="">Ovens & Furnaces</a></li>
+                                            <li><a href="">Water Baths</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Column 4 - Featured/Banners -->
+                                    <div class="megamenu-featured">
+                                        <div class="featured-item">
+                                            <img src="assets/images/scppionchrom.png" alt="Chromatography" class="img-fluid">
+                                            <div class="featured-text">
+                                                <h5>Advanced Chromatography</h5>
+                                                <p class="mt-5">Latest Ion & Gas Systems</p>
+                                                <a href="allcategory.html" class="btn btn-sm btn-primary snban">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                       </li>
-                      <li class="main-menu-list">
+                      <!-- <li class="main-menu-list">
                         <a class="nav-link" href="allproduct.html">Products</a>
-                      </li>
+                      </li> -->
                       <!-- <li class="main-menu-list">
                         <a class="nav-link" href="allcatalog.html">Catalogs</a>
                       </li> -->
@@ -309,10 +366,10 @@
                       </li>
                     </ul>
                   </nav>
-                  <div class="mail-section">
+                  <!-- <div class="mail-section">
                     <span class="iconmail"></span>
                     <a href="allcategory.html">Sale! 30% OFF!</a>
-                  </div>
+                  </div> -->
                   </div>
                 </div>
               </div>
@@ -320,9 +377,18 @@
       </header>
       <div id="carouselExampleAutoplaying" class="carousel slide w-100" data-bs-ride="carousel">
         <div class="carousel-inner">
-
           <!-- Slide 1 -->
            <div class="chromlab-banner carousel-item active">
+            <img src="assets/images/chromlab banner 4 2.webp" class="bancar d-block" alt="">
+
+            <div class="banner-overlay">
+              <h2 class="banner-title" style="color: #278b2a;">Precision Chromatography Solutions</h2>
+              <p class="banner-subtitle comintrocar" style="max-width: 800px;">Transform your laboratory with state-of-the-art chromatography systems designed for unmatched precision and reliability. Chromlab delivers cutting-edge HPLC, UHPLC, GC, and ion chromatography instruments engineered to exceed the most demanding analytical requirements. Our systems feature advanced quaternary pumps with pulse-free delivery, high-resolution UV-Vis and fluorescence detectors, and intelligent autosamplers for 24/7 operation. Robust column ovens maintain exact temperature control while proprietary software provides seamless method development, compliance-ready data management, and real-time chromatogram analysis.</p>
+              <a href="allproduct.html" class="btn banner-btn" style="background-color: #0779d7 !important">About Us</a>
+            </div>
+          </div>
+          <!-- Slide 1 -->
+           <!-- <div class="chromlab-banner carousel-item">
             <img src="assets/images/b5.jpg" class="bancar d-block" alt="">
 
             <div class="banner-overlay">
@@ -330,7 +396,7 @@
               <p class="banner-subtitle comintrocar" style="max-width: 1000px;">Transform your laboratory with state-of-the-art chromatography systems designed for unmatched precision and reliability. Chromlab delivers cutting-edge HPLC, UHPLC, GC, and ion chromatography instruments engineered to exceed the most demanding analytical requirements. Our systems feature advanced quaternary pumps with pulse-free delivery, high-resolution UV-Vis and fluorescence detectors, and intelligent autosamplers for 24/7 operation. Robust column ovens maintain exact temperature control while proprietary software provides seamless method development, compliance-ready data management, and real-time chromatogram analysis.</p>
               <a href="allproduct.html" class="btn banner-btn" style="background-color: #0779d7 !important">About Us</a>
             </div>
-          </div>
+          </div> -->
           <!-- Slide 2 -->
           <div class="chromlab-banner carousel-item">
             <img src="assets/images/chromlab banner 1 1.webp" class="bancar d-block" alt="">
@@ -407,9 +473,9 @@
                   <div class="upcateimage">
                     <img id="cateImage" src="" alt="">
                   </div>
-                  <div class="upname">
+                  <a href="productbycategory.html" class="upname">
                     <h2 id="cateName" class="up_name-title"></h2>
-                  </div>
+                  </a>
                   <div class="updescription">
                     <p id="cateDesc" class="updesk"></p>
                   </div>
@@ -1264,21 +1330,10 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
+                      <!-- <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt=""> -->
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1335,20 +1390,9 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
+                      <!-- <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt=""> -->
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
-                  </div>
-                  <div class="chrom-dots">
-                    <button class="chrom-dot active" data-index="0"></button>
-                    <button class="chrom-dot" data-index="1"></button>
-                    <button class="chrom-dot" data-index="2"></button>
                   </div>
                 </div>
                 <div class="vert-btn">
@@ -1407,21 +1451,10 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
+                      <!-- <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt=""> -->
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1479,21 +1512,10 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/gas-chromatography.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
+                      <!-- <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
+                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt=""> -->
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1551,21 +1573,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1622,21 +1631,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1695,21 +1691,8 @@
                     <div class="chrom-slider" >
                       <div class="chrom-slides">
                         <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
-                        <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                        <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                       </div>
-
-                      <!-- <div class="chrom-dots">
-                        <button class="chrom-dot active" data-index="0"></button>
-                        <button class="chrom-dot" data-index="1"></button>
-                        <button class="chrom-dot" data-index="2"></button>
-                      </div> -->
                     </div>
-                    <div class="chrom-dots">
-                        <button class="chrom-dot active" data-index="0"></button>
-                        <button class="chrom-dot" data-index="1"></button>
-                        <button class="chrom-dot" data-index="2"></button>
-                      </div>
                   </div>
                   <div class="vert-btn">
                       <button class="btn view" data-tip="Wishlist"
@@ -1767,21 +1750,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1839,21 +1809,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/portable-gc-ms.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1911,21 +1868,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/portable-ion-chromatograph.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -1983,21 +1927,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2052,6 +1983,549 @@
         </div>
        </section>
 
+       <section class="top-rated">
+        <div class="container-fluid">
+          <div class="row mb-5">
+            <div class="col-xl-4">
+              <div class="heightlight">
+                <img src="assets/images/scppionchrom.png" alt="">
+                <h2 class="section-title text-center mb-2">Ion Chromatograph</h2>
+                <p class="trpp">Discover our heightlight products, carefully selected for their exceptional quality and performance. These items represent the pinnacle of innovation and reliability in our collection.</p>
+                <a href="products.html" class="btn exploree-btn">Explore More</a>
+              </div>
+            </div>
+            <div class="col-xl-8">
+               <!-- <h1 class="section-title text-center mb-2">New Lab Equipment</h1> -->
+              <div class="scslider-carousel">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Automatic Fraction Collector CLFC-401</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 1700.00</span><span>2000</span>
+                      </div>
+                      <ul>
+                        <li><span>Tube quantity :</span><span>100</span></li>
+                        <li><span>Maximum capacity :</span><span>12ml</span></li>
+                        <li><span>Time set :</span><span> 1 second to 24 hours</span></li>
+                        <li><span>Display :</span><span>LED</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr32"
+                        data-product-name="Automatic Fraction Collector CLFC-401"
+                        data-product-img="assets/images/products/automatic-fraction-collector.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#32Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Automatic Fraction Collector CLFC-402</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 1700.00</span><span>2000</span>
+                      </div>
+                      <ul>
+                        <li><span>Tube quantity :</span><span>100</span></li>
+                        <li><span>Maximum capacity :</span><span>12ml</span></li>
+                        <li><span>Time set :</span><span> 1 second to 24 hours</span></li>
+                        <li><span>Display :</span><span>LED</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr33"
+                        data-product-name="Automatic Fraction Collector CLFC-402"
+                        data-product-img="assets/images/products/automatic-fraction-collector.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#33Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-601</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr34"
+                        data-product-name="Gas Chromatography CLGC-601"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#34Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-602</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr35"
+                        data-product-name="Gas Chromatography CLGC-602"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#35Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-601</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr34"
+                        data-product-name="Gas Chromatography CLGC-601"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#34Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-602</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr35"
+                        data-product-name="Gas Chromatography CLGC-602"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#35Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="heightlight">
+                <img src="assets/images/products/portable-gc-ms.jpg" alt="">
+                <h2 class="section-title text-center mb-2">Portable GC-MS</h2>
+                <p class="trpp">Discover our heightlight products, carefully selected for their exceptional quality and performance. These items represent the pinnacle of innovation and reliability in our collection.</p>
+                <a href="products.html" class="btn exploree-btn">Explore More</a>
+              </div>
+            </div>
+            <div class="col-xl-8">
+               <!-- <h1 class="section-title text-center mb-2">New Lab Equipment</h1> -->
+              <div class="scslider-carousel">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Automatic Fraction Collector CLFC-401</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 1700.00</span><span>2000</span>
+                      </div>
+                      <ul>
+                        <li><span>Tube quantity :</span><span>100</span></li>
+                        <li><span>Maximum capacity :</span><span>12ml</span></li>
+                        <li><span>Time set :</span><span> 1 second to 24 hours</span></li>
+                        <li><span>Display :</span><span>LED</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr32"
+                        data-product-name="Automatic Fraction Collector CLFC-401"
+                        data-product-img="assets/images/products/automatic-fraction-collector.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#32Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Automatic Fraction Collector CLFC-402</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/automatic-fraction-collector.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 1700.00</span><span>2000</span>
+                      </div>
+                      <ul>
+                        <li><span>Tube quantity :</span><span>100</span></li>
+                        <li><span>Maximum capacity :</span><span>12ml</span></li>
+                        <li><span>Time set :</span><span> 1 second to 24 hours</span></li>
+                        <li><span>Display :</span><span>LED</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Automatic Fraction Collector CLFC-402" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1700.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr33"
+                        data-product-name="Automatic Fraction Collector CLFC-402"
+                        data-product-img="assets/images/products/automatic-fraction-collector.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#33Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-601</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr34"
+                        data-product-name="Gas Chromatography CLGC-601"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#34Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-602</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr35"
+                        data-product-name="Gas Chromatography CLGC-602"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#35Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-601</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr34"
+                        data-product-name="Gas Chromatography CLGC-601"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#34Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  <div class="hor-card">
+                    <div class="name-hor">
+                      <a href=""><h4>Gas Chromatography CLGC-602</h4></a>
+                    </div>
+                    <div class="image-col">
+                      <img src="assets/images/products/gas-chromatography.jpg" alt="">
+                    </div>
+                    <div class="content-hor">
+                      <div class="price-section p-0 mt-2 mb-1">
+                        <span>$ 2000.00</span><span>2500</span>
+                      </div>
+                      <ul>
+                        <li><span>Detection Capability :</span><span>As, Hg, Se, Sb, Te</span></li>
+                        <li><span>Reproducibility :</span><span>Qualitative: <2%</span></li>
+                        <li><span>Correlation Coefficient :</span><span> 5 to 40℃</span></li>
+                        <li><span>Weight :</span><span>65 kg</span></li>
+                      </ul>
+                    </div>
+                    <div class="buttons-section">
+                      <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                      <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+
+                      </button>
+                      <button class="btn view" data-tip="Wishlist" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="2000.00">
+                        <i class="hgi hgi-stroke hgi-favourite"></i>
+
+                      </button>
+                      <button class="btn card_compare" data-tip="Compare"
+                        data-product-id="cpr35"
+                        data-product-name="Gas Chromatography CLGC-602"
+                        data-product-img="assets/images/products/gas-chromatography.jpg">
+                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                    </button>
+                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#35Modal">
+                      <i class="hgi hgi-stroke hgi-view"></i>
+                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                        <div class="card-tooltip" id="cardTip1"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
       <section class="chromlab-card-section featpro">
         <div class="container-fluid">
           <h1 class="section-title">Featured Product</h1>
@@ -2062,21 +2536,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2132,21 +2593,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2203,21 +2651,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2275,21 +2710,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/gas-chromatography.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2347,21 +2769,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/ion-chromatograph-1737962696.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2419,21 +2828,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/liquid-chromatograph-mass-spectrometer-1737980133.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2491,21 +2887,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/portable-gc-ms.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2563,21 +2946,8 @@
                   <div class="chrom-slider" >
                     <div class="chrom-slides">
                       <img src="assets/images/products/portable-ion-chromatograph.jpg" class="chrom-slide active" alt="">
-                      <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide" alt="">
-                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide" alt="">
                     </div>
-
-                    <!-- <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div> -->
                   </div>
-                  <div class="chrom-dots">
-                      <button class="chrom-dot active" data-index="0"></button>
-                      <button class="chrom-dot" data-index="1"></button>
-                      <button class="chrom-dot" data-index="2"></button>
-                    </div>
                 </div>
                 <div class="vert-btn">
                     <button class="btn view" data-tip="Wishlist"
@@ -2632,10 +3002,6 @@
           </div>
         </div>
       </section>
-
-      
-
-
 
        <section class="top-rated">
         <div class="container-fluid">
@@ -3162,6 +3528,53 @@
         </div>
        </section>
 
+       <section class="testmonial-section">
+        <div class="testimonial-carousel" id="uniqueTestimonialCarousel1">
+          <!-- Slides -->
+          <div class="carousel-track" id="uniqueCarouselTrack1">
+              <div class="carousel-slide active" data-slide="0">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Samuel Fox" class="profile-img">
+                  <div class="testimonial-content">
+                      <p class="testimonial-text">"I must theme awesome. Samuel Fox if I mind correctly configure and contact support face problem support last enable. Thank"</p>
+                      <div class="user-info">
+                          <span class="user-name">Samuel Fox</span>
+                          <span class="verified-badge">✓ Verified</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="carousel-slide" data-slide="1">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Jane Doe" class="profile-img">
+                  <div class="testimonial-content">
+                      <p class="testimonial-text">"Outstanding service and quality products. The setup was seamless and customer support was incredibly responsive."</p>
+                      <div class="user-info">
+                          <span class="user-name">Jane Doe</span>
+                          <span class="verified-badge">✓ Verified</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="carousel-slide" data-slide="2">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="John Smith" class="profile-img">
+                  <div class="testimonial-content">
+                      <p class="testimonial-text">"Best e-commerce platform I've used. Perfect for our lab equipment catalog with smooth UI and fast loading."</p>
+                      <div class="user-info">
+                          <span class="user-name">John Smith</span>
+                          <span class="verified-badge">✓ Verified</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <!-- <button class="nav-arrow prev-arrow" id="uniquePrevBtn1">‹</button>
+          <button class="nav-arrow next-arrow" id="uniqueNextBtn1">›</button> -->
+
+          <!-- Dots -->
+          <div class="carousel-dots" id="uniqueCarouselDots1"></div>
+      </div>
+       </section>
+
        <!-- What We Offer Section -->
       <section class="what-we-offer-section">
         <div class="container-fluid">
@@ -3209,6 +3622,7 @@
           </div>
         </div>
       </section>
+
        <footer>
          <div class="middle-footer">
             <div div class="container-fluid">
@@ -3592,6 +4006,42 @@
                 {
                       breakpoint: 1400,
                       settings: { slidesToShow: 3 }
+                  },
+                  {
+                      breakpoint: 1200,
+                      settings: { slidesToShow: 3 }
+                  },
+                  {
+                      breakpoint: 991,
+                      settings: { slidesToShow: 2 }
+                  },
+                  {
+                      breakpoint: 768,
+                      settings: { slidesToShow: 2 }
+                  },
+                  {
+                      breakpoint: 480,
+                      settings: { slidesToShow: 1 }
+                  }
+              ]
+          });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('.scslider-carousel').slick({
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: true, // Enable navigation arrows
+              autoplay: false,
+              autoplaySpeed: 8500, // Slide every 2.5 seconds (customize as needed)
+              prevArrow: '<button type="button" class="slick-prev" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 50%; left: -40px; z-index: 3;"></button>',
+              nextArrow: '<button type="button" class="slick-next" style="background: #1d297c; color: #fff; border: none; border-radius: 18px; width: 36px; height: 36px; font-size: 20px; position: absolute; top: 50%; right: -40px; z-index: 3;"></button>',
+              responsive: [
+                {
+                      breakpoint: 1400,
+                      settings: { slidesToShow: 2 }
                   },
                   {
                       breakpoint: 1200,

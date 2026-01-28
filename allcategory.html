@@ -294,9 +294,9 @@
                       <li class="main-menu-list">
                         <a class="nav-link" href="allcategory.html">Chromlab Categories</a>
                       </li>
-                      <li class="main-menu-list">
+                      <!-- <li class="main-menu-list">
                         <a class="nav-link" href="allproduct.html">Products</a>
-                      </li>
+                      </li> -->
                       <!-- <li class="main-menu-list">
                         <a class="nav-link" href="allcatalog.html">Catalogs</a>
                       </li> -->
@@ -311,10 +311,10 @@
                       </li>
                     </ul>
                   </nav>
-                  <div class="mail-section">
+                  <!-- <div class="mail-section">
                     <span class="iconmail"></span>
                     <a href="allcategory.html">Sale! 30% OFF!</a>
-                  </div>
+                  </div> -->
                   </div>
                 </div>
               </div>
@@ -331,11 +331,11 @@
         <section class="allcategory">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="titleofpage">
+                    <div class="titleofpage px-0">
                         <h1>Chromlab Categories</h1>
                     </div>
                     <div class="d-flex align-items-start p-0">
-                      <div class="accolnav me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <div class="accolnav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="btn nav-link active navactab" id="v-pills-ac1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ac1" type="button" role="tab" aria-controls="v-pills-ac1" aria-selected="true">
                           <div class="allcategory-col">
                             <div class="ac-card">
@@ -479,68 +479,69 @@
                             </div>
                         </button>
                       </div>
-                      <div class="hold-ban accolnavcontent tab-content pt-0" id="v-pills-tabContent">
+                      <div class="hold-ban accolnavcontent tab-content pt-0 px-0" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-ac1" role="tabpanel" aria-labelledby="v-pills-ac1-tab" tabindex="0">
-                          
                           <div class="row w-100">
                             <span class="subnameac">Triple Quadrupole GC-MS</span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
-                              <div class="chrom-product-name">
-                                <a href="productdescription.html"><h3>Triple Quadrupole GCMS CLTQC-601</h3></a>
-                              </div>
-                              <div class="vert-btn">
-                                <button class="btn view" data-tip="Wishlist"
-                                  data-product-name="Triple Quadrupole GCMS CLTQC-601"
-                                  data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg"
-                                  data-product-price="299.99">
-                                  <i class="hgi hgi-stroke hgi-favourite"></i>
-                                </button>
-                                <button class="btn card_compare"
-                                  data-product-id="cpr38"
-                                  data-product-name="Triple Quadrupole GCMS CLTQC-601"
-                                  data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg">
-                                  <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
-                                </button>
-                                <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
-                                  <i class="hgi hgi-stroke hgi-view"></i>
-                                  <span class="spinner-border spinner-border-sm" role="status"></span>
-                                </button>
-                              </div>
-                              <div class="chrom-img-section">
-                                <div class="chrom-slider" >
-                                  <div class="chrom-slides">
-                                    <img src="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" class="chrom-slide active" alt="">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Triple Quadrupole GCMS CLTQC-601</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Triple Quadrupole GCMS CLTQC-601"
+                                    data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Triple Quadrupole GCMS CLTQC-601"
+                                    data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" class="chrom-slide active" alt="">
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="price-section">
-                                <span>$ 1299.00</span><span>1500</span>
-                              </div>
-                              <div class="specs-list">
-                                <ul>
-                                  <li><span>Tube quantity :</span> <span>100</span></li>
-                                  <li><span>Maximum capacity :</span> <span>12ml</span></li>
-                                  <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
-                                  <li><span>Display :</span> <span>LED</span></li>
-                                </ul>
-                              </div>
-                              <div class="buttons-section">
-                                <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
-                                <button class="btn cart" data-tip="Add to cart" data-product-name="Triple Quadrupole GCMS CLTQC-601" data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" data-product-price="1299.00">
-                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
-                                </button>
-                                  <div class="card-tooltip" id="cardTip1"></div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Triple Quadrupole GCMS CLTQC-601" data-product-img="assets/images/products/triple-quadrupole-gc-ms-1741694172.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
                           </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-ac2" role="tabpanel" aria-labelledby="v-pills-ac2-tab" tabindex="0">
                            <div class="row w-100">
                             <span class="subnameac">TLC Scanner </span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>TLC Scanner CLTS-601</h3></a>
                               </div>
@@ -594,8 +595,9 @@
                         <div class="tab-pane fade" id="v-pills-ac3" role="tabpanel" aria-labelledby="v-pills-ac3-tab" tabindex="0">
                           <div class="row w-100">
                             <span class="subnameac">Portable Ion Chromatograph </span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Portable Ion Chromatograph CLPIC-601</h3></a>
                               </div>
@@ -649,8 +651,9 @@
                         <div class="tab-pane fade" id="v-pills-ac4" role="tabpanel" aria-labelledby="v-pills-ac4-tab" tabindex="0">
                           <div class="row w-100">
                             <span class="subnameac">Portable GC-MS</span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Portable GC-MS CLPCS-601</h3></a>
                               </div>
@@ -704,8 +707,9 @@
                         <div class="tab-pane fade" id="v-pills-ac5" role="tabpanel" aria-labelledby="v-pills-ac5-tab" tabindex="0">
                           <div class="row w-100">
                             <span class="subnameac">Liquid Chromatography</span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Liquid Chromatography CLLC-601</h3></a>
                               </div>
@@ -755,7 +759,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Liquid Chromatography CLLC-602</h3></a>
                               </div>
@@ -805,7 +809,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Liquid Chromatography CLLC-603</h3></a>
                               </div>
@@ -859,8 +863,9 @@
                         <div class="tab-pane fade" id="v-pills-ac6" role="tabpanel" aria-labelledby="v-pills-ac6-tab" tabindex="0">
                           <div class="row w-100">
                             <span class="subnameac">Liquid Chromatograph Mass Spectrometer</span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Liquid Chromatograph Mass Spectrometer CLMS-601 </h3></a>
                               </div>
@@ -910,7 +915,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Liquid Chromatograph Mass Spectrometer CLMS-602 </h3></a>
                               </div>
@@ -964,8 +969,9 @@
                         <div class="tab-pane fade" id="v-pills-ac7" role="tabpanel" aria-labelledby="v-pills-ac7-tab" tabindex="0">
                           <div class="row w-100">
                             <span class="subnameac">Ion Chromatograph</span>
+                             <div class="loading-container row w-100"></div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Ion Chromatograph CLIC-601</h3></a>
                               </div>
@@ -1015,7 +1021,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Ion Chromatograph CLIC-602</h3></a>
                               </div>
@@ -1065,7 +1071,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Ion Chromatograph CLIC-603</h3></a>
                               </div>
@@ -1115,7 +1121,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Ion Chromatograph CLIC-604</h3></a>
                               </div>
@@ -1165,7 +1171,7 @@
                             </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-                            <div class="chrom-cards">
+                            <div class="chrom-cards real-products" style="display: none;">
                               <div class="chrom-product-name">
                                 <a href="productdescription.html"><h3>Ion Chromatograph CLIC-605</h3></a>
                               </div>
@@ -1216,10 +1222,330 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-pane fade" id="v-pills-ac8" role="tabpanel" aria-labelledby="v-pills-ac8-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="v-pills-ac9" role="tabpanel" aria-labelledby="v-pills-ac9-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="v-pills-ac10" role="tabpanel" aria-labelledby="v-pills-ac10-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="v-pills-ac11" role="tabpanel" aria-labelledby="v-pills-ac11-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="v-pills-ac8" role="tabpanel" aria-labelledby="v-pills-ac8-tab" tabindex="0">
+                          <div class="row w-100">
+                            <span class="subnameac">Gas Chromatography</span>
+                             <div class="loading-container row w-100"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Gas Chromatography CLGC-601</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Gas Chromatography CLGC-601"
+                                    data-product-img="assets/images/products/gas-chromatography.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Gas Chromatography CLGC-601"
+                                    data-product-img="assets/images/products/gas-chromatography.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/gas-chromatography.jpg" class="chrom-slide active" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-601" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Gas Chromatography CLGC-602</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Gas Chromatography CLGC-602"
+                                    data-product-img="assets/images/products/gas-chromatography.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Gas Chromatography CLGC-602"
+                                    data-product-img="assets/images/products/gas-chromatography.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/gas-chromatography.jpg" class="chrom-slide active" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatography CLGC-602" data-product-img="assets/images/products/gas-chromatography.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-ac9" role="tabpanel" aria-labelledby="v-pills-ac9-tab" tabindex="0">
+                          <div class="row w-100">
+                            <span class="subnameac">Gas Chromatograph-Mass Spectrometer</span>
+                             <div class="loading-container row w-100"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Gas Chromatograph-Mass Spectrometer CLGMS-601</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601"
+                                    data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601"
+                                    data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide active" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-601" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Gas Chromatograph-Mass Spectrometer CLGMS-602</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-602"
+                                    data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-602"
+                                    data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" class="chrom-slide active" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Gas Chromatograph-Mass Spectrometer CLGMS-602" data-product-img="assets/images/products/gas-chromatography-mass-spectrometry-1737962764.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-ac10" role="tabpanel" aria-labelledby="v-pills-ac10-tab" tabindex="0">
+                          <div class="row w-100">
+                            <span class="subnameac">Element Analyzer</span>
+                             <div class="loading-container row w-100"></div>
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                              <div class="chrom-cards real-products" style="display: none;">
+                                <div class="chrom-product-name">
+                                  <a href="productdescription.html"><h3>Element Analyzer CLEA-101</h3></a>
+                                </div>
+                                <div class="vert-btn">
+                                  <button class="btn view" data-tip="Wishlist"
+                                    data-product-name="Element Analyzer CLEA-101"
+                                    data-product-img="assets/images/products/element-analyzer.jpg"
+                                    data-product-price="299.99">
+                                    <i class="hgi hgi-stroke hgi-favourite"></i>
+                                  </button>
+                                  <button class="btn card_compare"
+                                    data-product-id="cpr38"
+                                    data-product-name="Element Analyzer CLEA-101"
+                                    data-product-img="assets/images/products/element-analyzer.jpg">
+                                    <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                  </button>
+                                  <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                    <i class="hgi hgi-stroke hgi-view"></i>
+                                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                                  </button>
+                                </div>
+                                <div class="chrom-img-section">
+                                  <div class="chrom-slider" >
+                                    <div class="chrom-slides">
+                                      <img src="assets/images/products/element-analyzer.jpg" class="chrom-slide active" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="price-section">
+                                  <span>$ 1299.00</span><span>1500</span>
+                                </div>
+                                <div class="specs-list">
+                                  <ul>
+                                    <li><span>Tube quantity :</span> <span>100</span></li>
+                                    <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                    <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                    <li><span>Display :</span> <span>LED</span></li>
+                                  </ul>
+                                </div>
+                                <div class="buttons-section">
+                                  <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                  <button class="btn cart" data-tip="Add to cart" data-product-name="Element Analyzer CLEA-101" data-product-img="assets/images/products/element-analyzer.jpg" data-product-price="1299.00">
+                                  <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                  </button>
+                                    <div class="card-tooltip" id="cardTip1"></div>
+                                </div>
+                              </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-ac11" role="tabpanel" aria-labelledby="v-pills-ac11-tab" tabindex="0">
+                          <div class="row w-100">
+                            <span class="subnameac">Automatic Fraction Collector</span>
+                             <div class="loading-container row w-100"></div>
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
+                                <div class="chrom-cards real-products" style="display: none;">
+                                  <div class="chrom-product-name">
+                                    <a href="productdescription.html"><h3>Automatic Fraction Collector CLFC-401</h3></a>
+                                  </div>
+                                  <div class="vert-btn">
+                                    <button class="btn view" data-tip="Wishlist"
+                                      data-product-name="Automatic Fraction Collector CLFC-401"
+                                      data-product-img="assets/images/products/automatic-fraction-collector.jpg"
+                                      data-product-price="299.99">
+                                      <i class="hgi hgi-stroke hgi-favourite"></i>
+                                    </button>
+                                    <button class="btn card_compare"
+                                      data-product-id="cpr38"
+                                      data-product-name="Automatic Fraction Collector CLFC-401"
+                                      data-product-img="assets/images/products/automatic-fraction-collector.jpg">
+                                      <i class="hgi hgi-stroke hgi-square-arrow-data-transfer-diagonal"></i>
+                                    </button>
+                                    <button class="btn qview" data-tip="Quick View" data-bs-toggle="modal" data-bs-target="#38Modal">
+                                      <i class="hgi hgi-stroke hgi-view"></i>
+                                      <span class="spinner-border spinner-border-sm" role="status"></span>
+                                    </button>
+                                  </div>
+                                  <div class="chrom-img-section">
+                                    <div class="chrom-slider" >
+                                      <div class="chrom-slides">
+                                        <img src="assets/images/products/automatic-fraction-collector.jpg" class="chrom-slide active" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="price-section">
+                                    <span>$ 1299.00</span><span>1500</span>
+                                  </div>
+                                  <div class="specs-list">
+                                    <ul>
+                                      <li><span>Tube quantity :</span> <span>100</span></li>
+                                      <li><span>Maximum capacity :</span> <span>12ml</span></li>
+                                      <li><span>Time set :</span> <span>1 second to 24 hours</span></li>
+                                      <li><span>Display :</span> <span>LED</span></li>
+                                    </ul>
+                                  </div>
+                                  <div class="buttons-section">
+                                    <button class="btn explore-btn" href="productdescription.html" data-tip="View Product">Explore</button>
+                                    <button class="btn cart" data-tip="Add to cart" data-product-name="Automatic Fraction Collector CLFC-401" data-product-img="assets/images/products/automatic-fraction-collector.jpg" data-product-price="1299.00">
+                                    <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                                    </button>
+                                      <div class="card-tooltip" id="cardTip1"></div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                 </div>
