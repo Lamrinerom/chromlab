@@ -1100,19 +1100,19 @@ function generateLoadingCardsForTab(container, count = 6) {
   
   for(let i = 0; i < count; i++) {
     const col = document.createElement('div');
-    col.className = 'col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4';
+    col.className = 'col-xl-3 col-lg-4 col-md-4 col-sm-6 mb-4';
     col.innerHTML = `
       <div class="chrom-cards loading-card">
         <div class="vert-btn loading-shimmer"></div>
+        <div class="chrom-product-name">
+          <div class="skeleton-text skeleton-title"></div>
+        </div>
         <div class="chrom-img-section">
           <div class="chrom-slider">
             <div class="chrom-slides">
               <div class="chrom-slide skeleton-image"></div>
             </div>
           </div>
-        </div>
-        <div class="chrom-product-name">
-          <div class="skeleton-text skeleton-title"></div>
         </div>
         <div class="price-section">
           <div class="skeleton-text skeleton-price"></div>
@@ -1135,7 +1135,7 @@ function generateLoadingCardsForTab(container, count = 6) {
 //           <div class="skeleton-button skeleton-cart"></div>
 //         </div>}
 // Replace setTimeout with your actual fetch
-async function loadProductsForTab(tabId) {
+async function loadProductsForTab(tabId ) {
   try {
     const response = await fetch(`/api/products?category=${tabId}`);
     const products = await response.json();
@@ -1154,6 +1154,7 @@ setTimeout(() => {
   loadProductsForTab(targetTabId);
 }, 500);
 
+// -------------------------------------------------
 
 // -------------------------------------------megamenu
 
